@@ -71,6 +71,9 @@ table{
     $MAIN
 \*------------------------------------*/
 
+.clear {
+    clear: both;
+}
 .centered {
 	display: block;
 	margin-left: auto;
@@ -93,4 +96,27 @@ table{
 
 .button:hover {
 	background: #444;
+}
+
+.projects {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+}
+
+.project {
+    display: block;
+    width: 30%;
+    height: 350px;
+    margin: 10px;
+    background-color: #ddd;
+    float: left;
+}
+
+.project h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
 }
