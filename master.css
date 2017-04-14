@@ -106,12 +106,15 @@ table{
 }
 
 .project {
-    display: block;
+/*    display: block;*/
     width: 30%;
     height: 350px;
     margin: 10px;
     background-color: #ddd;
     float: left;
+
+    /* hide for now */
+    display: none;
 }
 
 .project h3 {
