@@ -101,20 +101,17 @@ table{
 .projects {
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: none;
     clear: both;
 }
 
 .project {
-/*    display: block;*/
+    display: block;
     width: 30%;
     height: 350px;
     margin: 10px;
     background-color: #ddd;
     float: left;
-
-    /* hide for now */
-    display: none;
 }
 
 .project h3 {
