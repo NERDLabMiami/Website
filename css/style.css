@@ -1,0 +1,614 @@
+/****************************************************************
+    Browser Reset
+****************************************************************/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*****************************************************************/
+
+
+/*****************************************************************
+  General Global Styles
+*****************************************************************/
+@font-face {
+   font-family: BebasNeue;
+   src: url(../media/fonts/BebasNeue.woff);
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  width: 100%;
+  color: black;
+  background-color: white;
+}
+
+h1, h2, h3, h4 {
+	font-family: BebasNeue;
+}
+
+/*****************************************************************/
+
+
+/*****************************************************************
+  Header and Hamburger Menu Styles
+*****************************************************************/
+/*
+Header is relative so z-index: 1 guarantees always displayed on top
+*/
+header {
+    background-color: #0998C6;
+    padding: 10px;
+    text-decoration: none;
+    position: fixed;
+    width: calc(100% - 20px);
+		height: 60px;
+    z-index: 1;
+}
+
+/*
+using background color is important to cover the menu
+position absolute isset to cover the whole viewport
+*/
+#content {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    width: auto;
+    min-height: 1000px;
+}
+
+/*
+the hamburger button with a little gradient effekt
+*/
+div#hamburger {
+    float: right;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    padding: 3px 4px 3px;
+    margin-right: 10px;
+		margin-top: 14px;
+    position: relative;
+    width: 28px;
+    background: #087FA6;
+    background: -moz-linear-gradient(top,  #087FA6 0%, #096989 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#087FA6), color-stop(100%, #096989));
+    background: -webkit-linear-gradient(top,  #087FA6 0%,#096989 100%);
+    background: -o-linear-gradient(top,  #087FA6 0%,#096989 100%);
+    background: -ms-linear-gradient(top,  #087FA6 0%,#096989 100%);
+    background: linear-gradient(to bottom,  #087FA6 0%,#096989 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#087FA6', endColorstr='#096989',GradientType=0 );
+}
+
+/*
+The white stripes in the hamburger button
+*/
+#hamburger div {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 2px 2px 2px 2px;
+    height: 2px;
+    margin-top: 4px;
+    width: 90%;
+		cursor: pointer;
+}
+
+/*
+The navigation container in the background
+*/
+nav {
+    /*left: 0px;*/
+    right:0px;
+    margin-right: -30%;
+    top: 0px;
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x:hidden;
+    overflow-y:auto ;
+    background: #3e3c3d;
+    background: -moz-linear-gradient(top,  #3e3c3d 0%, #2d2c2d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e3c3d), color-stop(100%,#2d2c2d));
+    background: -webkit-linear-gradient(top,  #3e3c3d 0%,#2d2c2d 100%);
+    background: -o-linear-gradient(top,  #3e3c3d 0%,#2d2c2d 100%);
+    background: -ms-linear-gradient(top,  #3e3c3d 0%,#2d2c2d 100%);
+    background: linear-gradient(to bottom,  #3e3c3d 0%,#2d2c2d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3c3d', endColorstr='#2d2c2d',GradientType=0 );
+}
+
+
+header#homepageheader {
+	height: 40px;
+	position: fixed;
+}
+
+header#homepageheader div#hamburger {
+	margin-top: 5px;
+}
+
+/*
+Style the navigation menu
+*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 1px solid #222222;
+    border-top: 1px solid #444444;
+    padding: 15px;
+}
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div.subpagelogo {
+	position: absolute;
+	left: calc(50% - 40px);
+	top: 10px;
+}
+
+div.subpagelogo img.logo {
+	height: 60px;
+	margin: 0;
+}
+
+/*
+The Layer that will be layed over the content
+so that the content is unclickable while menu is shown
+*/
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left:0;
+    /*right: 0;*/
+    top: 0;
+    width: 70%;
+    z-index: 5;
+    min-height: 1062px;
+}
+
+div#currentpage {
+  float: left;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+/*****************************************************************/
+
+
+/*****************************************************************
+  Background Video Styles
+*****************************************************************/
+
+div.videowrapper {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  max-height: 800px;
+  background-color: rgba(67, 66, 68, 0.8);
+}
+
+div.logo {
+  height: 299px;
+  width: 263px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+
+#video-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: auto;
+  min-width: 100%;
+  z-index: -10;
+  height: auto;
+  background: transparent url(luis-llerena-14779.jpg) no-repeat;
+  background-size: cover;
+}
+/*****************************************************************/
+
+/*****************************************************************
+  Subpage Header Styles
+*****************************************************************/
+div.headerpic {
+	height: 500px;
+	background-color: #434244;
+	text-align: center;
+}
+
+div.headerpic h2 {
+	line-height: 500px;
+	font-size: 5em;
+	color: white;
+	text-transform: uppercase;
+}
+/*****************************************************************/
+
+
+/*****************************************************************
+  Tiles Styles
+*****************************************************************/
+
+ul.tiles {
+  list-style-type: none;
+  display: block;
+  background-color: #e6e7e8;
+}
+/*****************************************************************/
+
+
+/*****************************************************************
+  Cube Boxes Styles
+*****************************************************************/
+section.all-boxes {
+  background-color: #fff;
+  margin-top: 0px;
+  padding-top: 0px;
+  overflow: visible;
+  display: block;
+	text-align: center;
+	height: auto;
+	padding-bottom: 100px;
+}
+
+/* 3D Cube */
+.space3d {
+  perspective: 1000px;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  display: inline-block;
+	padding: 100px;
+}
+
+._3dbox {
+  display: inline-block;
+  transition: all 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+._3dface {
+  overflow: hidden;
+  position: absolute;
+  border: 1px solid #fff;
+  background: #FFF;
+  box-shadow: inset 0 0 10px rgba(204, 204, 204, 0.1), 0 0 10px rgba(204, 204, 204, 0.3);
+  color: #333;
+  opacity: 1;
+}
+
+._3dface p {
+	color: white;
+	z-index: 200;
+	font-size: 1.2em;
+	width: auto;
+	height: auto;
+	line-height: 1.5em;
+	margin-top: 100px;
+}
+
+._3dface ._3dface--front p{
+	line-height: 250px;
+}
+
+._3dface--front {
+	line-height: 250px;
+  width: 250px;
+  height: 250px;
+  transform: translate3d(0, 0, 125px);
+}
+
+._3dface--top {
+  width: 250px;
+  height: 250px;
+  transform: rotateX(90deg) translate3d(0, 0, 125px);
+}
+
+._3dface--bottom {
+  width: 250px;
+  height: 250px;
+  transform: rotateX(-90deg) translate3d(0, 0, 125px);
+}
+
+._3dface--left {
+  width: 250px;
+  height: 250px;
+  left: 50%;
+  margin-left: -125px;
+  transform: rotateY(-90deg) translate3d(0, 0, 125px);
+}
+
+._3dface--right {
+  width: 250px;
+  height: 250px;
+  left: 50%;
+  margin-left: -125px;
+  transform: rotateY(90deg) translate3d(0, 0, 125px);
+}
+
+._3dface--back {
+  width: 250px;
+  height: 250px;
+  transform: rotateY(180deg) translate3d(0, 0, 125px);
+}
+
+#projects:hover {
+  transform: rotateY(90deg);
+}
+
+#awards:hover {
+	transform: rotateX(90deg);
+}
+
+#team:hover {
+  transform: rotateY(-90deg);
+}
+
+#about:hover {
+  transform: rotateX(-90deg);
+}
+
+#projects ._3dface--front {
+	background-image: url('../media/dayne-topkin-78980.jpg');
+	background-size: cover;
+}
+
+#awards ._3dface--front {
+	background-image: url('../media/luis-llerena-14779.jpg');
+	background-size: cover;
+}
+
+#team ._3dface--front {
+	background-image: url('../media/margarida-csilva-121801.jpg');
+	background-size: cover;
+}
+
+#about ._3dface--front {
+	background-image: url('../media/patrick-tomasso-88398.jpg');
+	background-size: cover;
+}
+
+._3dface--front {
+  background-color: #FFFFFF;
+  background-size: 100%;
+}
+
+._3dface--front h2 {
+	z-index: 100;
+	color: black;
+	font-size: 2.6em;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+._3dface--left {
+  background: #E04B9A;
+  background-size: auto 100%;
+}
+
+._3dface--right {
+  background: #0998C6;
+  background-size: auto 100%;
+}
+
+._3dface--top {
+  background: #434244;
+  background-size: auto 100%;
+}
+
+._3dface--bottom {
+  background: #00A550;
+  background-size: auto 100%;
+}
+
+._3dface--back {
+  background: grey;
+  background-size: auto 100%;
+}
+
+.opacity-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: -1000;
+	width: 100%;
+	background-color: rgba(255,255,255,0.5);
+}
+
+/*****************************************************************/
+
+
+
+/*****************************************************************
+  Footer Styles
+*****************************************************************/
+footer {
+	height: 350px;
+	background-color: #0998C6;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+/* Circle tab above the footer */
+footer .circle {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	top: -50px;
+	border-radius: 70px;
+	width: 140px;
+	height: 140px;
+	background-color: #0998C6;
+	line-height: 90px;
+}
+
+/* Arrow inside the Circle tab above the footer */
+footer .circle img.arrow {
+	width: 50px;
+	transform: rotateX(180deg);
+}
+
+footer ul.socialmedia {
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+footer ul.socialmedia li {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+
+footer ul.socialmedia li a {
+	color: white;
+}
+
+footer p.footertext {
+	width: 500px;
+	margin: auto;
+	color: white;
+	font-weight: bold;
+}
+
+/*****************************************************************/
+
+
+/*****************************************************************
+	Projects Page CSS
+*****************************************************************/
+#zoorush:hover {
+
+}
+
+#unsavory:hover {
+
+}
+
+#dongreycafe:hover {
+
+}
+
+#dreamy:hover {
+
+}
+
+#atlantis:hover {
+
+}
+
+#zoorush {
+	background-image: url('../media/zoorush.png');
+	background-size: cover;
+}
+
+#dongreycafe {
+	background-image: url('../media/dongreycafe.png');
+	background-size: cover;
+}
+
+#atlantis {
+	background-image: url('../media/atlantis.png');
+	background-size: cover;
+}
+
+#unsavory {
+	background-image: url('../media/unsavory.png');
+	background-size: cover;
+}
+
+#dreamy {
+	background-image: url('../media/dreamy.png');
+	background-size: cover;
+}
+
+section.all-projects {
+	width: 100%;
+}
+
+div.project {
+	height: 600px;
+	width: 800px;
+	display: inline-block;
+	margin: 25px;
+}
+
+/*****************************************************************/

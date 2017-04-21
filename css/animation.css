@@ -1,0 +1,195 @@
+div.animated-logo-container.topview {
+  z-index: 1000;
+  position: absolute;
+  top: 260px;
+  left: calc(50% - 130px);
+}
+
+/* 3D Cube */
+.animated-logo-container {
+	perspective: 1000px;
+	width: 260px;
+	height: 260px;
+	text-align: center;
+	display: inline-block;
+}
+
+._3dbox-logo {
+	display: inline-block;
+	transition: all 0.85s cubic-bezier(0.175,0.885,0.320,1.275);
+
+  text-align: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+  transform: rotateX(-15deg) rotateY(15deg);
+}
+
+._3dface-logo {
+	overflow: hidden;
+	position: absolute;
+
+	border: 1px solid #888;
+	background: #FFF;
+  color: #333;
+  line-height: 260px;
+  opacity: 0.8;
+}
+
+
+._3dface-logo--front {
+  width: 260px;
+  height: 260px;
+  transform: translate3d(0, 0, 130px);
+}
+
+._3dface-logo--top {
+  width: 260px;
+  height: 260px;
+  transform: rotateX(90deg) translate3d(0, 0, 130px);
+}
+
+._3dface-logo--bottom {
+  width: 260px;
+  height: 260px;
+	transform: rotateX(-90deg) translate3d(0, 0, 130px);
+}
+
+._3dface-logo--left {
+	width: 260px;
+  height: 260px;
+  left: 50%;
+  margin-left: -130px;
+  transform: rotateY(-90deg) translate3d(0, 0, 130px);
+}
+
+._3dface-logo--right {
+  width: 260px;
+  height: 260px;
+  left: 50%;
+  margin-left: -130px;
+	transform: rotateY(90deg) translate3d(0, 0, 130px);
+}
+
+._3dface-logo--back {
+  width: 260px;
+  height: 260px;
+	transform: rotateY(180deg) translate3d(0, 0, 130px);
+}
+
+/*================================
+  Animation with pauses
+==================================*/
+
+/** Mozilla Firefox Keyframes **/
+@-moz-keyframes spinning-cube {
+	0% {
+		-moz-transform: rotateY(90deg);
+	}
+	10% {
+		-moz-transform: rotateY(-90deg);
+	}
+	40% {
+		-moz-transform: rotateX(90deg);
+	}
+	50% {
+		-moz-transform: rotateX(-90deg);
+	}
+	100%{
+		-moz-transform: rotateY(180deg);
+	}
+}
+
+/** Webkit Keyframes **/
+@-webkit-keyframes spinning-cube {
+	0% {
+		-webkit-transform: rotateY(90deg);
+	}
+	10% {
+		-webkit-transform: rotateY(-90deg);
+	}
+	40% {
+		-webkit-transform: rotateX(90deg);
+	}
+	50% {
+		-webkit-transform: rotateX(-90deg);
+	}
+	100%{
+		-webkit-transform: rotateY(180deg);
+	}
+}
+
+/** Keyframes **/
+@keyframes spinning-cube {
+	0% {
+		transform: rotateY(90deg);
+	}
+	10% {
+		transform: rotateY(-90deg);
+	}
+	40% {
+		transform: rotateX(90deg);
+	}
+	50% {
+		transform: rotateX(-90deg);
+	}
+	100%{
+		transform: rotateY(180deg);
+	}
+}
+
+#radio-left:checked ~ .animated-logo-container ._3dbox-logo {
+  transform: rotateY(90deg);
+}
+
+#radio-right:checked ~ .animated-logo-container ._3dbox-logo {
+  transform: rotateY(-90deg);
+}
+
+#radio-bottom:checked ~ .animated-logo-container ._3dbox-logo {
+  transform: rotateX(90deg);
+}
+
+#radio-top:checked ~ .animated-logo-container ._3dbox-logo {
+  transform: rotateX(-90deg);
+}
+
+#radio-back:checked ~ .animated-logo-container ._3dbox-logo {
+  transform: rotateY(180deg);
+}
+
+  // Apply backgrounds
+  ._3dface-logo--front {
+    background-image: url('../media/Cube/face2.png');
+    background-size: cover;
+  }
+
+  ._3dface-logo--left {
+    background-image: url('../media/Cube/face3.png');
+    background-size: cover;
+  }
+
+   ._3dface-logo--right {
+    background-image: url('../media/Cube/face4.png');
+    background-size: cover;
+  }
+
+   ._3dface-logo--top {
+    background-image: url('../media/Cube/face5.png');
+    background-size: cover;
+  }
+
+   ._3dface-logo--bottom {
+    background-image: url('../media/Cube/face6.png');
+    background-size: cover;
+  }
+
+  ._3dface-logo--back {
+    background-image: url('../media/Cube/face7.png');
+    background-size: cover;
+  }
+
+  ._3dbox-logo {
+    animation: spinning-cube 20s infinite linear;
+  }

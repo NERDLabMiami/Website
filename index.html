@@ -1,76 +1,146 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
 <head>
-	<meta charset=utf-8 />
-	<title></title>
-	<link rel="stylesheet" type="text/css" media="screen" href="master.css" />
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <meta charset="utf-8">
+
+  <title>NERDLab</title>
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no” />
+  <meta name="description" content="The NERDLab Site">
+  <meta name="author" content="University of Miami">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mediaqueries.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://use.fontawesome.com/ce0a8a07a0.js"></script>
+
 </head>
+
 <body>
-	<section>
- 		<img src="nerdlab_mono_logo.png" width=400 class="centered"/>
- 	</section>
+  <!--This wrapping container is used to get the width of the whole content-->
+  <div id="container">
 
- 	<section class="projects">
- 		<div class="project">
-	 		<h3>Queso</h3>
- 		</div>
+  <!--The Hamburger Button in the Header-->
+  <header id="homepageheader">
+    <div id="currentpage">
+      <p></p>
+    </div>
+    <div id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+  <nav id="insideMenu" class="mobileNav">
+    <ul>
+        <li><a id="projectspagelink" href="projects.html">Projects</a></li>
+        <li><a id="awardspagelink" href="awards.html">Awards</a></li>
+        <li><a id="teampagelink" href="team.html">Team</a></li>
+        <li><a id="aboutpagelink" href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <!--The mobile navigation Markup hidden via css-->
 
- 		<div class="project">
-	 		<h3>Zoo Rush</h3>
- 		</div>
+  <!--The Layer that will be layed over the content  so that the content is unclickable while menu is shown-->
+  <div id="contentLayer"></div>
+  <div id="content">
+  <div class="videowrapper">
 
- 		<div class="project">
-	 		<h3>Dreamy</h3>
- 		</div>
+    <div class="animated-logo-container topview">
 
- 		<div class="project">
-	 		<h3>Toma El Paso</h3>
- 		</div>
+    <div class="_3dbox-logo">
+      <div class="_3dface-logo _3dface-logo--front"></div>
+      <div class="_3dface-logo _3dface-logo--top"></div>
+      <div class="_3dface-logo _3dface-logo--bottom"></div>
+      <div class="_3dface-logo _3dface-logo--left"></div>
+      <div class="_3dface-logo _3dface-logo--right"></div>
+      <div class="_3dface-logo _3dface-logo--back"></div>
+    </div>
 
- 		<div class="project">
-	 		<h3>Unsavory</h3>
- 		</div>
+</div>
 
- 		<div class="project">
-	 		<h3>Eradicate!</h3>
- 		</div>
+    <!-- STATIC LOGO CUBE
+    <div class="logo">
+      <img class="logo" src="media/nerdlab-cube.png" alt="nerdlab logo"/>
+    </div>
+    -->
+    <video autoplay loop muted poster="luis-llerena-14779.jpg" id="video-bg" class="fullscreen-bg__video">
+      <source src="media/nerdlab-sample.mp4" type="video/mp4">
+    </video>
+  </div>
 
- 		<div class="project">
-	 		<h3>Don Grey Cafe</h3>
- 		</div>
+  <section class="all-boxes">
 
- 		<div class="project">
-	 		<h3>Vanity</h3>
- 		</div>
+      <div class="space3d">
+        <a href="projects.html">
+        <div class="_3dbox" id="projects">
+          <div class="_3dface _3dface--front"><div class="opacity-overlay"></div><h2>Projects</h2></div>
+          <div class="_3dface _3dface--top"></div>
+          <div class="_3dface _3dface--bottom"></div>
+          <div class="_3dface _3dface--left"><p>Interactive projects with a social impact</p></div>
+          <div class="_3dface _3dface--right"></div>
+          <div class="_3dface _3dface--back"></div>
+        </div>
+        </a>
+      </div>
 
- 		<div class="project">
-	 		<h3>Atlantis</h3>
- 		</div>
+      <div class="space3d">
+        <a href="awards.html">
+        <div class="_3dbox" id="awards">
+          <div class="_3dface _3dface--front"><div class="opacity-overlay"></div><h2>Awards</h2></div>
+          <div class="_3dface _3dface--top"></div>
+          <div class="_3dface _3dface--bottom"><p>See our awards and accolades</p></div>
+          <div class="_3dface _3dface--left"></div>
+          <div class="_3dface _3dface--right"></div>
+          <div class="_3dface _3dface--back"></div>
+        </div>
+        </a>
+      </div>
 
- 		<div class="project">
-	 		<h3>SCAN Portal</h3>
- 		</div>
+      <div class="space3d">
+      <a href="team.html">
+        <div class="_3dbox" id="team">
+          <div class="_3dface _3dface--front"><div class="opacity-overlay"></div><h2>Team</h2></div>
+          <div class="_3dface _3dface--top"></div>
+          <div class="_3dface _3dface--bottom"></div>
+          <div class="_3dface _3dface--left"></div>
+          <div class="_3dface _3dface--right"><p>The people who make it happen</p></div>
+          <div class="_3dface _3dface--back"></div>
+        </div>
+        </a>
+    </div>
 
- 		<div class="project">
-	 		<h3>PERIL</h3>
- 		</div>
+    <div class="space3d">
+      <a href="about.html">
+      <div class="_3dbox" id="about">
+        <div class="_3dface _3dface--front"><div class="opacity-overlay"></div><h2>About</h2></div>
+        <div class="_3dface _3dface--top"><p>What is NERDLab?</p></div>
+        <div class="_3dface _3dface--bottom"></div>
+        <div class="_3dface _3dface--left"></div>
+        <div class="_3dface _3dface--right"></div>
+        <div class="_3dface _3dface--back"></div>
+      </div>
+      </a>
+  </div>
+</section>
 
- 		<div class="project">
-	 		<h3>Dwell</h3>
- 		</div>
+  <footer>
+    <div class="circle"><img class="arrow" src="media/arrow.png" alt="click to return to top"/></div>
+    <ul class="socialmedia">
+      <li class="vimeo"><a href="#" title="email us"><i class="fa fa-vimeo fa-lg" aria-hidden="true"></a></i></li>
+      <li class="twitter"><a href="#" title="email us"><i class="fa fa-twitter fa-lg" aria-hidden="true"></a></i></li>
+      <li class="email"><a href="#" title="email us"><i class="fa fa-at fa-lg" aria-hidden="true"></a></i></li>
+    </ul>
+    <p class="footertext">NERDLab is a student-faculty cooperative driven by research, development, and an enthusiasm for social impact.</p>
+  </footer>
+  </div> <!-- end content div -->
 
- 		<div class="project">
-	 		<h3>ROC United Diners Guide</h3>
- 		</div>
+  </div> <!-- end container div -->
 
- 	</section>
+  <script src="js/script.js"></script>
 
- 	<section class="clear">
- 		<a href="http://presskit.nerdlab.miami" class="button">Presskit</a>
- 	</section>
 </body>
 </html>
