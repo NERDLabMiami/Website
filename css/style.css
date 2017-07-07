@@ -86,10 +86,12 @@ div.videowrapper {
 }
 #about .title, #team .title {
   color: #ffffff;
+  font-size: 1.5em;
 }
 
 #team .subtitle {
   color: #eeeeee;
+  font-size: 1em;
 }
 
 video {
