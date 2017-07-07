@@ -1,15 +1,14 @@
 div.animated-logo-container.topview {
-  z-index: 1000;
-  position: absolute;
-  top: 260px;
-  left: calc(50% - 130px);
+	z-index: 1000;
+    position: absolute;
+    right: 50px;
 }
 
 /* 3D Cube */
 .animated-logo-container {
 	perspective: 1000px;
-	width: 260px;
-	height: 260px;
+	width: 50px;
+	height: 50px;
 	text-align: center;
 	display: inline-block;
 }
@@ -17,65 +16,62 @@ div.animated-logo-container.topview {
 ._3dbox-logo {
 	display: inline-block;
 	transition: all 0.85s cubic-bezier(0.175,0.885,0.320,1.275);
-
-  text-align: center;
+  	text-align: center;
 	position: relative;
 	width: 100%;
 	height: 100%;
 	transform-style: preserve-3d;
-  transform: rotateX(-15deg) rotateY(15deg);
+  	transform: rotateX(-15deg) rotateY(15deg);
 }
 
 ._3dface-logo {
 	overflow: hidden;
 	position: absolute;
-
 	border: 1px solid #888;
 	background: #FFF;
-  color: #333;
-  line-height: 260px;
-  opacity: 0.8;
+  	color: #333;
+  	line-height: 260px;
+  	opacity: 0.8;
 }
 
-
 ._3dface-logo--front {
-  width: 260px;
-  height: 260px;
-  transform: translate3d(0, 0, 130px);
+  width: 50px;
+  height: 50px;
+  transform: translate3d(0, 0, 25px);
 }
 
 ._3dface-logo--top {
-  width: 260px;
-  height: 260px;
-  transform: rotateX(90deg) translate3d(0, 0, 130px);
+  width: 50px;
+  height: 50px;
+  transform: rotateX(90deg) translate3d(0, 0, 25px);
 }
 
 ._3dface-logo--bottom {
-  width: 260px;
-  height: 260px;
-	transform: rotateX(-90deg) translate3d(0, 0, 130px);
+  	width: 50px;
+  	height: 50px;
+	transform: rotateX(-90deg) translate3d(0, 0, 25px);
 }
 
 ._3dface-logo--left {
-	width: 260px;
-  height: 260px;
-  left: 50%;
-  margin-left: -130px;
-  transform: rotateY(-90deg) translate3d(0, 0, 130px);
+	width: 50px;
+  	height: 50px;
+  	left: 50%;
+  	margin-left: -25px;
+  	transform: rotateY(-90deg) translate3d(0, 0, 25px);
 }
 
 ._3dface-logo--right {
-  width: 260px;
-  height: 260px;
-  left: 50%;
-  margin-left: -130px;
-	transform: rotateY(90deg) translate3d(0, 0, 130px);
+  	width: 50px;
+  	height: 50px;
+  	left: 50%;
+  	margin-left: -25px;
+	transform: rotateY(90deg) translate3d(0, 0, 25px);
 }
 
 ._3dface-logo--back {
-  width: 260px;
-  height: 260px;
-	transform: rotateY(180deg) translate3d(0, 0, 130px);
+  	width: 50px;
+  	height: 50px;
+	transform: rotateY(180deg) translate3d(0, 0, 25px);
 }
 
 /*================================
