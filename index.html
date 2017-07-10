@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mediaqueries.css">
@@ -25,8 +25,29 @@
   <!--This wrapping container is used to get the width of the whole content-->
 	<img class="logo" src="media/nerdlab-cube.png"/>
     <video loop muted autoplay>
-    	 	 <source src="media/nerdlab-sample.mp4" type="video/mp4">
+    	 	 <source src="media/nerdlab_background.mp4" type="video/mp4">
     </video>
+
+<div id="modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              Sit tight, we're nerding out working on the site! This link will be live soon.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <button class="modal-close is-large"></button>
+</div>
+
+
+
 
 <section id="about" class="section">
 
@@ -85,7 +106,7 @@
 			        <article class="tile is-child is-primary">
 			          <h4 class="title">SCAN 360</h4>
 			          <figure class="image is-square">
-			            <a href="#"><img src="media/projects/scan360.png"></a>
+			            <a href="#" class="not-live"><img src="media/projects/scan360.png"></a>
 			          </figure>
 			        </article>
 			  </div>
@@ -104,7 +125,7 @@
 			        <article class="tile is-child is-primary">
 			          <h4 class="title">Dreamy</h4>
 			          <figure class="image is-square">
-			            <a href="#"><img src="media/projects/dreamy.png"></a>
+			            <a href="#" class="not-live"><img src="media/projects/dreamy.png"></a>
 			          </figure>
 
 			        </article>
@@ -121,7 +142,7 @@
 			        <article class="tile is-child is-primary">
 			          <h4 class="title">Atlantis</h4>
 			          <figure class="image is-square">
-			            <a href="#"><img src="media/projects/atlantis.png"></a>
+			            <a href="#" class="not-live"><img src="media/projects/atlantis.png"></a>
 			          </figure>
 			        </article>
 			  </div>
@@ -133,7 +154,7 @@
 			        <article class="tile is-child is-info">
 			          <h4 class="title">Dwell</h4>
 			          <figure class="image is-square">
-			            <a href="#"><img src="media/projects/dwell.png"></a>
+			            <a href="#" class="not-live"><img src="media/projects/dwell.png"></a>
 			          </figure>
 			        </article>
 			  </div>
@@ -150,7 +171,7 @@
 			        <article class="tile is-child is-info">
 			          <h4 class="title">Por Nuestras Calles</h4>
 			          <figure class="image is-square">
-			            <a href="#"><img src="media/projects/pnc.png"></a>
+			            <a href="#" class="not-live"><img src="media/projects/pnc.png"></a>
 			          </figure>
 			        </article>
 			  </div>
