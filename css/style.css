@@ -331,4 +331,30 @@ div.project {
 	margin: 25px;
 }
 
+@media all and (max-width: 768px) {
+.tile.is-3.is-parent{
+  display: flex;
+    flex: none;
+    width: 50%;
+    float: left;
+
+}
+.tile.is-2.is-parent{
+  width: 50%;
+  float: left;
+}
+.nextRow
+{
+  clear:both;
+}
+
+.actualHeight
+{
+height: -webkit-fill-available;
+clear: both;
+}
+}
+
+
+
 /*****************************************************************/
