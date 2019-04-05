@@ -1,372 +1,350 @@
-/*****************************************************************/
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: all .1s ease;
+}
 
-
-/*****************************************************************
-  General Global Styles
-*****************************************************************/
 @font-face {
    font-family: BebasNeue;
-   src: url(../media/fonts/BebasNeue.woff);
+   src: url(fonts/BebasNeue-Regular.woff);
+}
+h1,h3,h2,h4,h5,h6{
+  font-family: BebasNeue;
+}
+.navbar
+{
+  background: #434244 !important;
+  color:#fff !important;
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+  padding-right: 0px !important;
 }
 
-html, body {
-  font-family: Roboto, sans-serif;
-  background: #444345;
+.navbar-light .navbar-nav .nav-link
+{
+  color:#fff !important;
 }
 
-h1, h2, h3, h4 {
-	font-family: BebasNeue;
+.about
+{background: #434244;
+  border-top-right-radius: 20px;
+  margin-left: -21px;
+  z-index: 5;
+}
+.portfolio
+{
+  background: #00A550;
+  border-top-right-radius: 20px;
+  margin-left: -21px;
+  z-index: 4;
+}
+
+.activity
+{
+  background: #0998C6;
+
+  border-top-right-radius: 20px;
+  margin-left: -21px;
+  z-index: 3;
+}
+
+.team{
+  background:#E04B9A;
+  /* border-top-right-radius: 20px; */
+  margin-left: -21px;
+  z-index: 2;
+}
+
+.nav-link
+{
+  padding-left:200px !important;
+  height: 60px;
+  padding-top: 20px;
 }
 
 
-/*
-using background color is important to cover the menu
-position absolute isset to cover the whole viewport
-*/
-#content {
-    background-color: transparent;
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-    width: auto;
-    min-height: 1000px;
+.one{
+  background-color: #434244 !important;
+  background-image: -webkit-linear-gradient(100deg, #00A550 50%, #434244 50%);
+  min-height: 400px;
+  color:#fff;
+}
+.two{
+  background-color: #434244 !important;
+  background-image: -webkit-linear-gradient(80deg,#0998C6    50%, #00A550 50%);
+  min-height: 400px;
+  color:#fff;
+}
+
+.three{
+  background-color: #434244 !important;
+  background-image: -webkit-linear-gradient(100deg,#E04B9A    50%,#0998C6 50%);
+  min-height: 400px;
+  color:#fff;
+}
+
+.sectionOne
+{
+ background-color: #434244;
+  color:#fff;
+  text-align: center;
+  text-align: justify;
+  padding:20px;
+  /* padding-left: 200px;
+padding-right: 200px; */
+
 }
 
 
-/*
-The Layer that will be layed over the content
-so that the content is unclickable while menu is shown
-*/
-#contentLayer {
-    display: none;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: absolute;
-    left:0;
-    /*right: 0;*/
-    top: 0;
-    width: 70%;
-    z-index: 5;
-    min-height: 1062px;
+.sectionTwo
+{
+  background: #00A550
 }
 
+.navigationBar
+{
+  z-index: 5 !important;
+}
 
-/*****************************************************************/
+.titleSection
+{
+text-align: center !important;
+padding-top: 100px;
+color:#fff;
+}
 
+.videoContainer
+{
+  margin-top: 60px;
+}
 
-/*****************************************************************
-  Background Video Styles
-*****************************************************************/
-/*
-div.videowrapper {
+.sectionOneContent
+{
+  float:left;
+}
+
+.activities
+{
+  background:#0998C6;
+  /* padding-left: 200px;
+padding-right: 200px; */
+}
+
+.sectionThree
+{
+  background: #0998C6
+}
+
+.sectionFour{
+  background: #e04b9a;
+}
+/* Team Member CSS
+===========================*/
+
+h1.team-h1 {
   margin: 0;
-  width: 100%;
-  height: 100vh;
-  max-height: 800px;
-  background-color: rgba(67, 66, 68, 0.8);
-}
-
-
-#video-bg {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: auto;
-  min-width: 100%;
-  z-index: -10;
-  height: auto;
-  background: transparent url(luis-llerena-14779.jpg) no-repeat;
-  background-size: cover;
-}
-*/
-
-#projects .title {
-  font-size: 1.5rem;
-}
-#about .title, #team .title {
-  color: #ffffff;
-  font-size: 1.5em;
-  margin-bottom:0px;
-}
-
-#team .subtitle {
-  color: #eeeeee;
-  font-size: 1em;
-    margin-bottom:0px!important;
-    margin-top:0px !important;
-}
-
-video {
-  width: 100%    !important;
-  height: auto   !important;
-}
-#team {
-  color: #dddddd;
-  background: #444345;
-  margin-bottom:10px;
-
-}
-#about {
-    color: #dddddd;
-    font-size: 27px;
-    font-style: italic;
-    line-height: 43px;
-    background-color: transparent;
-  }
-/* background video */
-
-.fullscreen-bg {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
-  height: 715px;
-}
-
-.fullscreen-bg__video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -16px;
+  text-align: center;
+  left: 40%;
+  font-family: georgia;
+  font-style: italic;
+  background-color: white;
+  padding: 0px 20px;
+  color: #222;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-/*    height: 300%;
-    top: -100%;
-*/
-  }
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-@media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-  /*
-    width: 300%;
-    left: -100%;
-  */
-  }
+.cf:after {
+    clear: both;
 }
 
-@media (max-width: 767px) {
-  .fullscreen-bg {
-    background: url('../img/videoframe.jpg') center center / cover no-repeat;
-  }
-
-  .fullscreen-bg__video {
-    display: none;
-  }
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }
 
-/*****************************************************************/
-
-/*****************************************************************
-  Subpage Header Styles
-*****************************************************************/
-div.headerpic {
-	height: 500px;
-	background-color: #434244;
-	text-align: center;
+.team-container {
+  /* max-width: 1000px; */
+  margin: auto;
+  /* border-top: 1px #e9e9e9 solid; */
+  border-bottom: 1px #e9e9e9 solid;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  /* margin-top: 3em; */
+  position: relative;
 }
 
-div.headerpic h2 {
-	line-height: 500px;
-	font-size: 5em;
-	color: white;
-	text-transform: uppercase;
+.team-member {
+  width: 16%;
+  float: left;
+  text-align: center;
+  margin-right: 5%;
 }
-/*****************************************************************/
+
+.team-member:last-child {margin-right: 0;}
 
 
-/*****************************************************************
-  Tiles Styles
-*****************************************************************/
+.team-member span,
+.team-member h3 {
+  max-width: 200px;
+  font-family: sans-serif;
+  letter-spacing: -1px;
+}
 
-ul.tiles {
-  list-style-type: none;
+.team-member h3 {
+  color: #fff;
+}
+
+.email {
+  color: #fff;
+
+}
+
+.team-member span {
   display: block;
-  background-color: #e6e7e8;
+
 }
-/*****************************************************************/
+.team-photo {
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+  max-width: 50%;
+  height: auto;
+  transition: 0.1s transform ease-in-out;
+  margin-bottom: 10px;
+}
 
 
-/*****************************************************************/
+.team-photo:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+
+/* code for phone layout */
+@media (max-width:850px){
+  .team-member {
+    width:16%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 40px;
+
+  }
+
+}
 
 
 
-/*****************************************************************
-  Footer Styles
-*****************************************************************/
-
-#footer {
-    bottom: 0;
+@media (max-width:650px){
+  .team-member {
+    width:50% !important;
+    float: none;
+    display: block;
+    margin: 50px auto;
     width: 100%;
-    background-color: #0998C6;
-    color: #ffffff;
+    text-align: center;
+  }
+
+  .team-member h3,
+  .team-member span {
+    margin: 15px auto;
+  }
 }
 
-.videowrapper img.logo {
-    width: 100px;
-    left: 25px;
-    top: 25px;
-    position: absolute;
-}
-.logo {
-      width: 100px;
-    position: absolute;
-    z-index: 99;
-    left: 25px;
-    top: 25px;
-}
-}
+@media (max-width:992px){
 
-#footer_logo {
-    position: absolute;
-    right: 75px;
-    bottom: 75px;
-}
-#footer_logo img {
-    width: 100px;
+  .portfolio
+  {
+    background: #434244;
+    text-align: right;
+    padding-right:20px;
+  }
+
+.team
+{
+  background: #434244;
+  text-align: right;
+  padding-right:20px;
 }
 
-#footer_statement {
-  margin-top: -50px;
-}
-/* Circle tab above the footer */
-footer .circle {
-	display: inline-block;
-	text-align: center;
-	position: relative;
-	top: -50px;
-	border-radius: 70px;
-	background-color: #0998C6;
+.activity{
+  background: #434244;
+  text-align: right;
+  padding-right:20px;
 }
 
-/* Arrow inside the Circle tab above the footer */
-footer .circle img.arrow {
-	width: 50px;
-	transform: rotateX(180deg);
+.about{
+  background: #434244;
+  text-align: right;
+  padding-right:20px;
 }
-/*
-footer ul.socialmedia {
-	text-align: center;
-	width: 500px;
-	margin: auto;
 }
 
-footer ul.socialmedia li {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
+/* ENDS Team Member CSS
+===========================*/
+
+
+a:hover{
+
+  color:#fff;
 }
 
-footer ul.socialmedia li a {
-	color: white;
-}
-
-footer p.footertext {
-	margin: auto;
-	color: white;
-}
-*/
-
-/*****************************************************************/
-
-
-/*****************************************************************
-	Projects Page CSS
-*****************************************************************/
-#zoorush:hover {
-
-}
-
-#unsavory:hover {
-
-}
-
-#dongreycafe:hover {
-
-}
-
-#dreamy:hover {
-
-}
-
-#atlantis:hover {
-
-}
-
-#zoorush {
-	background-image: url('../media/zoorush.png');
-	background-size: cover;
-}
-
-#dongreycafe {
-	background-image: url('../media/dongreycafe.png');
-	background-size: cover;
-}
-
-#atlantis {
-	background-image: url('../media/atlantis.png');
-	background-size: cover;
-}
-
-#unsavory {
-	background-image: url('../media/unsavory.png');
-	background-size: cover;
-}
-
-#dreamy {
-	background-image: url('../media/dreamy.png');
-	background-size: cover;
-}
-
-section.all-projects {
-	width: 100%;
-}
-
-div.project {
-	height: 600px;
-	width: 800px;
-	display: inline-block;
-	margin: 25px;
-}
-
-@media all and (max-width: 768px) {
-.tile.is-3.is-parent{
-  display: flex;
-    flex: none;
-    width: 50%;
-    float: left;
-
-}
-.tile.is-2.is-parent{
-  width: 50%;
+.description
+{
   float: left;
 }
-.nextRow
+
+
+.mainSections
 {
-  clear:both;
+  background: #434244;
 }
 
-.actualHeight
+.teamMember
 {
-height: -webkit-fill-available;
-clear: both;
-}
+  color:#fff !important;
+  text-align: center;
+  padding-bottom:40px;
+  border: #0000000f;
+border-width: #ffffff12;
+border-width: 2px;
+border-style: outset;
+padding-top: 40px;
 }
 
-.teamTitle
+.socialIcon
 {
-  margin-bottom:10px!important;
+    color:#fff !important;
+    font-size:1.5em;
+    padding-right:5px;
 }
 
-.title
+.socialIcon:hover
 {
-  margin-bottom:5px !important;
+    color:#434244 !important;
+
 }
 
-/*****************************************************************/
+.footerContent p
+{
+  margin-bottom:0px !important;
+  color:#fff;
+}
+.footerContent
+{
+  background:#434244 !important
+}
+
+.marginFix
+{
+  margin:0px;
+}
