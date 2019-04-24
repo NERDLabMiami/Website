@@ -87,11 +87,14 @@ div.videowrapper {
 #about .title, #team .title {
   color: #ffffff;
   font-size: 1.5em;
+  margin-bottom:0px;
 }
 
 #team .subtitle {
   color: #eeeeee;
   font-size: 1em;
+    margin-bottom:0px!important;
+    margin-top:0px !important;
 }
 
 video {
@@ -101,6 +104,7 @@ video {
 #team {
   color: #dddddd;
   background: #444345;
+  margin-bottom:10px;
 
 }
 #about {
@@ -329,6 +333,40 @@ div.project {
 	width: 800px;
 	display: inline-block;
 	margin: 25px;
+}
+
+@media all and (max-width: 768px) {
+.tile.is-3.is-parent{
+  display: flex;
+    flex: none;
+    width: 50%;
+    float: left;
+
+}
+.tile.is-2.is-parent{
+  width: 50%;
+  float: left;
+}
+.nextRow
+{
+  clear:both;
+}
+
+.actualHeight
+{
+height: -webkit-fill-available;
+clear: both;
+}
+}
+
+.teamTitle
+{
+  margin-bottom:10px!important;
+}
+
+.title
+{
+  margin-bottom:5px !important;
 }
 
 /*****************************************************************/
