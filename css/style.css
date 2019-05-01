@@ -361,6 +361,12 @@ padding-top: 40px;
     font-size: 26px;
     color: #fff;
     text-decoration: none;
+    letter-spacing: 8px !important;
 
 
+
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link
+{
+letter-spacing: 8px;
 }
