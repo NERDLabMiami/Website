@@ -322,7 +322,7 @@ a:hover{
   border: #0000000f;
 border-width: #ffffff12;
 border-width: 2px;
-border-style: outset;
+border-style: none;
 padding-top: 40px;
 }
 
