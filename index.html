@@ -33,9 +33,6 @@
        <li class="nav-item portfolio">
           <a class="nav-link " href="#portfolioSection">Portfolio</a>
         </li>
-        <li class="nav-item activity">
-          <a class="nav-link" href="#activitySection">Activities</a>
-        </li>
         <li class="nav-item team">
           <a class="nav-link " href="#teamSection">Team</a>
         </li>
@@ -44,9 +41,40 @@
     </div>
   </nav>
   </div>
-  <video width="100%" autoplay="autoplay" loop class="videoContainer" src="videos/nerdlab_background.mp4" type="video/mp4">
+
+  <div id="toploop">
+<video width="100%" autoplay="autoplay" loop="" class="videoContainer" src="videos/nerdlab_background.mp4" type="video/mp4">
     <!-- <source src="videos/nerdlab_background.mp4" type="video/mp4" /> -->
   </video>
+<div id="textloop"></div></div>
+    
+    <script>
+        var values = ['We design interactive experiences', 
+                      'We design through collaboration', 
+                      'We design to inspire and educate', 
+                      'We design to change the world',
+                      'We design for social impact',
+                      'We design to make the world a better place',
+                      'We design to inspire',
+                      'We design to inform and educate',
+                      'We design to solve the complex challenges of today'];
+
+        textSequence(0);
+
+        function textSequence(i) {
+
+            if (values.length > i) {
+                setTimeout(function() {
+                    document.getElementById("textloop").innerHTML = values[i];
+                    textSequence(++i);
+                }, = 5000); // 1 second (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+    </script>
 
 <div class="mainSections" >
   <div class="offset-md-2 col-md-8 col-sm-12 sectionOne" id="aboutSection">
@@ -112,7 +140,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://games.nerdlab.miami/atlantis/">
-        <img src="images/projects/atlantis.png" alt="" />
+        <img src="images/projects/atlantis_bw.png" alt="" />
         <h1>Atlantis</h1>
         <p>A massively local multiplayer network game</p>
       </a>
@@ -121,7 +149,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://copsandrubbers.com/">
-        <img src="images/projects/copsrubbers.png" alt="" />
+        <img src="images/projects/copsrubbers_bw.png" alt="" />
         <h1>Cops & Rubbers</h1>
         <p>A tabletop game about the consequences of policing tactics for sex workers</p>
       </a>
@@ -130,7 +158,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://games.nerdlab.miami/dongreycafe/">
-        <img src="images/projects/dongreycafe.png" alt="" />
+        <img src="images/projects/dongreycafe_bw.png" alt="" />
         <h1>Don Grey Cafe</h1>
         <p>An endless tea-pouring adventure for mobile devices</p>
       </a>
@@ -139,7 +167,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink" href="#">
-        <img src="images/projects/dreamy.png" alt="" />
+        <img src="images/projects/dreamy_bw.png" alt="" />
         <h1>Dreamy</h1>
         <p>An evidence based dating simulator</p>
       </a>
@@ -148,13 +176,14 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://games.nerdlab.miami/dwell/">
-        <img src="images/projects/dwell.png" alt="" />
+        <img src="images/projects/dwell_bw.png" alt="" />
         <h1>Dwell</h1>
         <p>A tabletop simulation game focused on the impact of poverty</p>
       </a>
     </div>
   </li>
-  <li class="hex">
+
+<!--  <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://echoearthexperience.com/">
         <img src="images/projects/echoearth.png" alt="" />
@@ -163,10 +192,12 @@
       </a>
     </div>
   </li>
+
+-->
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://games.nerdlab.miami/eradicate/">
-        <img src="images/projects/eradicate.png" alt="" />
+        <img src="images/projects/eradicate_bw.png" alt="" />
         <h1>Eradicate</h1>
         <p>A card game in which you manage a village in an effort to eradicate mosquitoes</p>
       </a>
@@ -175,7 +206,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://games.nerdlab.miami/makeamap/">
-        <img src="images/projects/makeamap.png" alt="" />
+        <img src="images/projects/makeamap_bw.png" alt="" />
         <h1>Make a Map</h1>
         <p>Make yourself a fantasy map of the Carribean</p>
       </a>
@@ -184,7 +215,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="https://per.miami.edu/">
-        <img src="images/projects/PER_New.png" alt="" />
+        <img src="images/projects/per_bw.png" alt="" />
         <h1>Personal Exposure Reporter</h1>
         <p>A tool for firefighters to report on varied exposures to hazardous environments</p>
       </a>
@@ -193,7 +224,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://queso.cc/">
-        <img src="images/projects/queso.png" alt="" />
+        <img src="images/projects/queso_bw.png" alt="" />
         <h1>Queso</h1>
         <p>A classroom management system with a gameful twist</p>
       </a>
@@ -202,7 +233,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink" href="#">
-        <img src="images/projects/scan360.png" alt="" />
+        <img src="images/projects/scan360_bw.png" alt="" />
         <h1>Scan 360</h1>
         <p>Visualizing cancer data across the state of Florida</p>
       </a>
@@ -211,7 +242,7 @@
   <li class="hex">
     <div class="hexIn">
       <a class="hexLink smooth" href="http://games.nerdlab.miami/unsavory/">
-        <img src="images/projects/unsavory.png" alt="" />
+        <img src="images/projects/unsavory_bw.png" alt="" />
         <h1>Unsavory</h1>
         <p>Experience the world of restaurant work, without paid sick days</p>
       </a>
@@ -220,19 +251,6 @@
 
 </ul>
   </div>
-
-  <div class="two">
-  </div>
-  <div class="sectionThree" id="activitySection">
-    <h2 class="titleSection" >Activities</h2>
-    <div class="offset-2 col-8 activities">
-<!-- start feedwind code -->
-<!-- <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="104200/"></script>  -->
-<!-- end feedwind code -->
-<a href="https://twitter.com/NERDLabMiami?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @NERDLabMiami</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<a class="twitter-timeline" data-height="600" href="https://twitter.com/NERDLabMiami?ref_src=twsrc%5Etfw">Tweets by NERDLabMiami</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-</div>
 
 <div class="three"></div>
 <!-- this section wraps the team members as a container-->
