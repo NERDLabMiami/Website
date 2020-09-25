@@ -374,7 +374,7 @@ letter-spacing: 8px;
 #textloop {
     position: absolute;
     bottom: 0;
-    color: white;
+    color: #0998C6;
     font-family: BebasNeue;
     font-size: 5em;
     padding: 20px;
@@ -383,4 +383,9 @@ letter-spacing: 8px;
 
 a.hexlink {
       background-color: white;
+}
+
+
+.hex img { 
+padding: 30px; 
 }
