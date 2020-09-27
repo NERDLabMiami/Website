@@ -70,20 +70,20 @@ color:#fff !important;
 
 .one{
   background-color: #434244 !important;
-  background-image: -webkit-linear-gradient(100deg, #00A550 50%, #434244 50%);
-  min-height: 400px;
+  background-image: -webkit-linear-gradient(100deg, #0998C6 50%, #434244 50%);
+  min-height: 450px;
   color:#fff;
 }
 .two{
   background-color: #434244 !important;
-  background-image: -webkit-linear-gradient(80deg,#0998C6    50%, #00A550 50%);
+  background-image: -webkit-linear-gradient(80deg,#0998C6    50%, #0998C6 50%);
   min-height: 400px;
   color:#fff;
 }
 
 .three{
   background-color: #434244 !important;
-  background-image: -webkit-linear-gradient(100deg,#E04B9A    50%,#00A550 50%);
+  background-image: -webkit-linear-gradient(100deg,#E04B9A    50%,#0998C6 50%);
   min-height: 400px;
   color:#fff;
 }
@@ -103,7 +103,7 @@ padding-right: 200px; */
 
 .sectionTwo
 {
-  background: #00A550
+  background: #0998C6;
 }
 
 .navigationBar
@@ -121,6 +121,7 @@ color:#fff;
 .videoContainer
 {
   margin-top: 60px;
+  opacity: .75;
 }
 
 .sectionOneContent
@@ -373,16 +374,20 @@ letter-spacing: 8px;
 
 #textloop {
     position: absolute;
-    bottom: 0;
-    color: #0998C6;
+    top: 0;
+    color: #ffffff;
     font-family: BebasNeue;
     font-size: 5em;
     padding: 20px;
-
+    text-shadow: -1px 1px 2px #000,
+          1px 1px 2px #000,
+          1px -1px 0 #000,
+          -1px -1px 0 #000;
+    line-height: 1em;
 }
 
 .hexLink {
-      background-color: #0998C6;
+      background-color: #434244;
 }
 
 
