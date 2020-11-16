@@ -115,6 +115,8 @@ body {
 @media (min-width:1201px) { /* <- 5-4  hexagons per row */
   #hexGrid{
     padding-bottom: 4.4%
+    justify-content: center;
+
   }
   .hex {
     width: 20%; /* = 100 / 5 */
