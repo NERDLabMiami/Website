@@ -261,6 +261,11 @@ h1.team-h1 {
 
   }
 
+  #textloop {
+  font-size: 3em;
+
+  }
+
 }
 
 
@@ -313,6 +318,11 @@ h1.team-h1 {
 /* ENDS Team Member CSS
 ===========================*/
 
+@media only screen and (min-width: 921px) {
+  #textloop {
+    font-size: 5em;
+  }
+}
 
 a:hover{
 
@@ -389,10 +399,9 @@ a:hover{
 
 #textloop {
   position: absolute;
-  top: 0;
+  top: 60;
   color: #ffffff;
   font-family: BebasNeue;
-  font-size: 5em;
   padding: 20px;
   text-shadow: -1px 1px 2px #000,
   1px 1px 2px #000,
