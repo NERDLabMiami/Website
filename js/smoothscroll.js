@@ -1,3 +1,4 @@
+/*
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
 
@@ -22,6 +23,8 @@ $(document).ready(function () {
         });
     });
 });
+
+*/
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
