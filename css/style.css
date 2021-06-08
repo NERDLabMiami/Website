@@ -5,8 +5,8 @@
 }
 
 @font-face {
-   font-family: BebasNeue;
-   src: url(fonts/BebasNeue-Regular.woff);
+ font-family: BebasNeue;
+ src: url(fonts/BebasNeue-Regular.woff);
 }
 h1,h3,h2,h4,h5,h6{
   font-family: BebasNeue;
@@ -25,8 +25,8 @@ h1,h3,h2,h4,h5,h6{
   font-family: BebasNeue;
 
   font-weight: normal;
-color:#fff !important;
-    padding-right: 40px;
+  color:#fff !important;
+  padding-right: 40px;
 }
 
 .about
@@ -35,15 +35,22 @@ color:#fff !important;
   margin-left: -21px;
   z-index: 5;
 }
-.portfolio
+.featured
 {
-  background: #00A550;
+  background: #0998C6;
   border-top-right-radius: 20px;
   margin-left: -21px;
   z-index: 4;
 }
 
-.activity
+.other-projects {
+  background: #00A550;
+  border-top-right-radius: 20px;
+  margin-left: -21px;
+  z-index: 3;
+
+}
+.project
 {
   background: #0998C6;
 
@@ -61,7 +68,7 @@ color:#fff !important;
 
 .nav-link
 {
-      font-size: 22px;
+  font-size: 22px;
   padding-left:200px !important;
   height: 60px;
   padding-top: 20px;
@@ -70,20 +77,19 @@ color:#fff !important;
 
 .one{
   background-color: #434244 !important;
-  background-image: -webkit-linear-gradient(100deg, #00A550 50%, #434244 50%);
-  min-height: 400px;
+  background-image: -webkit-linear-gradient(100deg, #0998C6 50%, #434244 50%);
+  min-height: 450px;
   color:#fff;
 }
 .two{
   background-color: #434244 !important;
-  background-image: -webkit-linear-gradient(80deg,#0998C6    50%, #00A550 50%);
+  background-image: -webkit-linear-gradient(80deg,#00A550    50%,#0998C6  50%);
   min-height: 400px;
   color:#fff;
 }
-
 .three{
   background-color: #434244 !important;
-  background-image: -webkit-linear-gradient(100deg,#E04B9A    50%,#0998C6 50%);
+  background-image: -webkit-linear-gradient(100deg,#E04B9A    50%,#00A550 50%);
   min-height: 400px;
   color:#fff;
 }
@@ -91,19 +97,19 @@ color:#fff !important;
 .sectionOne
 {
  background-color: #434244;
-  color:#fff;
-  text-align: center;
-  text-align: justify;
-  padding:20px;
+ color:#fff;
+ text-align: center;
+ text-align: justify;
+ padding:20px;
   /* padding-left: 200px;
-padding-right: 200px; */
+  padding-right: 200px; */
 
 }
 
 
 .sectionTwo
 {
-  background: #00A550
+  background: #0998C6;
 }
 
 .navigationBar
@@ -111,16 +117,28 @@ padding-right: 200px; */
   z-index: 5 !important;
 }
 
+.add-padding {
+  padding-top: 60px;
+}
 .titleSection
 {
-text-align: center !important;
-padding-top: 100px;
-color:#fff;
+  text-align: center !important;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  color:#fff;
+}
+.subtitleSection
+{
+  text-align: center !important;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  color:#fff;
 }
 
 .videoContainer
 {
   margin-top: 60px;
+  opacity: .75;
 }
 
 .sectionOneContent
@@ -128,16 +146,14 @@ color:#fff;
   float:left;
 }
 
-.activities
+.projects
 {
-  background:#0998C6;
-  /* padding-left: 200px;
-padding-right: 200px; */
+  background: #00A550;
 }
 
 .sectionThree
 {
-  background: #0998C6
+  background: #00A550;
 }
 
 .sectionFour{
@@ -161,20 +177,20 @@ h1.team-h1 {
 
 .cf:before,
 .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .cf:after {
-    clear: both;
+  clear: both;
 }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf {
-    *zoom: 1;
+ .cf {
+  *zoom: 1;
 }
 
 .team-container {
@@ -245,6 +261,11 @@ h1.team-h1 {
 
   }
 
+  #textloop {
+  font-size: 3em;
+
+  }
+
 }
 
 
@@ -267,36 +288,41 @@ h1.team-h1 {
 
 @media (max-width:992px){
 
-  .portfolio
+  .featured
   {
     background: #434244;
     text-align: right;
     padding-right:20px;
   }
 
-.team
-{
-  background: #434244;
-  text-align: right;
-  padding-right:20px;
-}
+  .team
+  {
+    background: #434244;
+    text-align: right;
+    padding-right:20px;
+  }
 
-.activity{
-  background: #434244;
-  text-align: right;
-  padding-right:20px;
-}
+  .other-projects {
+    background: #434244;
+    text-align: right;
+    padding-right:20px;
+  }
 
-.about{
-  background: #434244;
-  text-align: right;
-  padding-right:20px;
-}
+  .about{
+    background: #434244;
+    text-align: right;
+    padding-right:20px;
+  }
 }
 
 /* ENDS Team Member CSS
 ===========================*/
 
+@media only screen and (min-width: 921px) {
+  #textloop {
+    font-size: 5em;
+  }
+}
 
 a:hover{
 
@@ -320,22 +346,22 @@ a:hover{
   text-align: center;
   padding-bottom:40px;
   border: #0000000f;
-border-width: #ffffff12;
-border-width: 2px;
-border-style: none;
-padding-top: 40px;
+  border-width: #ffffff12;
+  border-width: 2px;
+  border-style: none;
+  padding-top: 40px;
 }
 
 .socialIcon
 {
-    color:#fff !important;
-    font-size:1.5em;
-    padding-right:5px;
+  color:#fff !important;
+  font-size:1.5em;
+  padding-right:5px;
 }
 
 .socialIcon:hover
 {
-    color:#434244 !important;
+  color:#434244 !important;
 
 }
 
@@ -358,15 +384,37 @@ padding-top: 40px;
 
 .active{
 
-    font-size: 26px;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 8px !important;
+  font-size: 26px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 8px !important;
 
 
 
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link
 {
-letter-spacing: 8px;
+  letter-spacing: 8px;
+}
+
+#textloop {
+  position: absolute;
+  top: 60px;
+  color: #ffffff;
+  font-family: BebasNeue;
+  padding: 20px;
+  text-shadow: -1px 1px 2px #000,
+  1px 1px 2px #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+  line-height: 1em;
+}
+
+.hexLink {
+  background-color: #434244;
+}
+
+
+.hex img { 
+  padding: 30px; 
 }

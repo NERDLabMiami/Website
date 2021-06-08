@@ -1,355 +1,579 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NERDLab</title>
-    <link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/responsiveHex.css">
-    <link rel="stylesheet" type="text/css" href="css/hexagons.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="//load.sumome.com/"
-    data-sumo-site-id="53b2dd25c5501a16f16fe377e4f10a86790784f7a8cf0773f58265125fa5a0ca" async="async"></script>
-  </head>
-  <body>
-    <div class="navigationBar">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="images/nerdlab-cubeWhite.png" width="47" height="50" class="d-inline-block align-top" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NERDLab</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/responsiveHex.css">
+	<link rel="stylesheet" type="text/css" href="css/hexagons.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="navigationBar">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="images/nerdlab-cubeWhite.png" width="47" height="50" class="d-inline-block align-top" alt=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-    <div class="collapse navbar-collapse justify-content-end menu" id="navbarSupportedContent" >
-      <div id="menu-center">
-      <ul class="navbar-nav">
-        <li class="nav-item  about">
-          <a class="nav-link " href="#aboutSection" class="target__link" >About</a>
-        </li>
-       <li class="nav-item portfolio">
-          <a class="nav-link " href="#portfolioSection">Portfolio</a>
-        </li>
-        <li class="nav-item activity">
-          <a class="nav-link" href="#activitySection">Activities</a>
-        </li>
-        <li class="nav-item team">
-          <a class="nav-link " href="#teamSection">Team</a>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </nav>
-  </div>
-  <video width="100%" autoplay="autoplay" loop class="videoContainer" src="videos/nerdlab_background.mp4" type="video/mp4">
-    <!-- <source src="videos/nerdlab_background.mp4" type="video/mp4" /> -->
-  </video>
+			<div class="collapse navbar-collapse justify-content-end menu" id="navbarSupportedContent" >
+				<div id="menu-center">
+					<ul class="navbar-nav">
+						<li class="nav-item  about">
+							<a class="nav-link " href="#aboutSection" class="target__link" >About</a>
+						</li>
+						<li class="nav-item featured">
+							<a class="nav-link " href="#featuredSection">Featured</a>
+						</li>
+						<li class="nav-item other-projects">
+							<a class="nav-link" href="#projectsSection">Vault</a>
+						</li>
+						<li class="nav-item team">
+							<a class="nav-link " href="#teamSection">Team</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
 
-<div class="mainSections" >
-  <div class="offset-md-2 col-md-8 col-sm-12 sectionOne" id="aboutSection">
-    <h2 class="titleSection" >New Experience Research & Design Lab</h2>
-    <p class="description">New Experience Research & Design Lab (NERDLab) is a student-faculty cooperative driven by research, development, and an enthusiasm for social impact.
-      Based out of the Interactive Media program at the University of Miami School of Communication, we function as an incubator for initiatives that collaborate locally,
-      nationally, and in the global space. NERDLab integrates classic and novel techniques to produce projects that inspire and educate through innovation and fun.</p>
-    </div>
-<div class="one"></div>
+	<div id="toploop">
+		<video width="100%" autoplay muted loop class="videoContainer" src="videos/nerdlab_background.mp4" type="video/mp4">
+			<!-- <source src="videos/nerdlab_background.mp4" type="video/mp4" /> -->
+		</video>
+		<div id="textloop"></div></div>
 
-<div class="col-12 sectionTwo" id="portfolioSection">
-  <h2 class="titleSection" >Portfolio</h2>
-  <!-- <ul class="honeycomb" lang="es">
-  <li class="honeycomb-cell">
-  <img class="honeycomb-cell__image" src="images/projects/atlantis.png">
-    <a href="#"><div class="honeycomb-cell__title">Atlantis</div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/copsrubbers.png">
-    <a href="#"><div class="honeycomb-cell__title">copsrubbers</div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/dongreycafe.png">
-    <a href="#"><div class="honeycomb-cell__title">Don Gray Cafe</div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/dreamy.png">
-    <a href="#"><div class="honeycomb-cell__title">Dreamy</div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/dwell.png">
-    <a href="#"><div class="honeycomb-cell__title">Dwell<small>No vidrio</small></div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/echoearth.png">
-    <a href="#"><div class="honeycomb-cell__title">Echo Earth<small>1 de repuesto</small></div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/makeamap.png">
-    <a href="#"><div class="honeycomb-cell__title">Make a Map</div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/PER_New.png">
-    <a href="#"><div class="honeycomb-cell__title">Personal Exposure Reporter</div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/queso.png">
-    <a href="#"><div class="honeycomb-cell__title">Queso</div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/scan360.png">
-    <a href="#"><div class="honeycomb-cell__title">Scan260</div></a>
-  </li>
-  <li class="honeycomb-cell">
-    <img class="honeycomb-cell__image" src="images/projects/unsavory.png">
-    <a href="#"><div class="honeycomb-cell__title">Unsavory</div></a>
-  </li>
-  <li class="honeycomb-cell honeycomb__placeholder"></li>
-</ul> -->
+		<script>
+			var values = ['We design interactive experiences', 
+			'We design through collaboration', 
+			'We design to inspire and educate', 
+			'We design to change the world',
+			'We design for social impact',
+			'We design to make the world a better place',
+			'We design to inspire',
+			'We design to inform and educate',
+			'We design to solve the complex challenges of today'];
+
+			textSequence(0);
+
+			function textSequence(i) {
+
+				if (values.length > i) {
+					setTimeout(function() {
+						document.getElementById("textloop").innerHTML = values[i];
+						textSequence(++i);
+	                }, 5000); // 1 second (in milliseconds)
+
+	            } else if (values.length == i) { // Loop
+	            	textSequence(0);
+	            }
+
+	        }
+	    </script>
+
+	    <div class="mainSections" >
+	    	<div class="offset-md-2 col-md-8 col-sm-12 sectionOne" id="aboutSection">
+	    		<h2 class="titleSection add-padding" >New Experience Research & Design Lab</h2>
+	    		<p class="description">New Experience Research & Design Lab (NERDLab) is a student-faculty cooperative driven by research, development, and an enthusiasm for social impact.
+	    			Based out of the Interactive Media program at the University of Miami School of Communication, we function as an incubator for initiatives that collaborate locally,
+	    		nationally, and in the global space. NERDLab integrates classic and novel techniques to produce projects that inspire and educate through innovation and fun.</p>
+	    	</div>
+	    	<div class="one"></div>
+
+	    	<div class="col-12 sectionTwo" id="featuredSection">
+	    		<h1 class="titleSection">Featured Work</h1>
 
 
-<ul id="hexGrid">
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="http://games.nerdlab.miami/atlantis/">
-        <img src="images/projects/atlantis.png" alt="" />
-        <h1>Atlantis</h1>
-        <p>A massively local multiplayer network game</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="http://copsandrubbers.com/">
-        <img src="images/projects/copsrubbers.png" alt="" />
-        <h1>Cops & Rubbers</h1>
-        <p>A tabletop game about the consequences of policing tactics for sex workers</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="http://games.nerdlab.miami/dongreycafe/">
-        <img src="images/projects/dongreycafe.png" alt="" />
-        <h1>Don Grey Cafe</h1>
-        <p>An endless tea-pouring adventure for mobile devices</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="#">
-        <img src="images/projects/dreamy.png" alt="" />
-        <h1>Dreamy</h1>
-        <p>An evidence based dating simulator</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="http://games.nerdlab.miami/dwell/">
-        <img src="images/projects/dwell.png" alt="" />
-        <h1>Dwell</h1>
-        <p>A tabletop simulation game focused on the impact of poverty</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="http://echoearthexperience.com/">
-        <img src="images/projects/echoearth.png" alt="" />
-        <h1>Echo Earth</h1>
-        <p>A virtual reality experience that simulates how animals use echolocation to navigate</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="http://games.nerdlab.miami/eradicate/">
-        <img src="images/projects/eradicate.png" alt="" />
-        <h1>Eradicate</h1>
-        <p>A card game in which you manage a village in an effort to eradicate mosquitoes</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="http://games.nerdlab.miami/makeamap/">
-        <img src="images/projects/makeamap.png" alt="" />
-        <h1>Make a Map</h1>
-        <p>Make yourself a fantasy map of the Carribean</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="https://per.miami.edu/">
-        <img src="images/projects/PER_New.png" alt="" />
-        <h1>Personal Exposure Reporter</h1>
-        <p>A tool for firefighters to report on varied exposures to hazardous environments</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink smooth" href="http://queso.cc/">
-        <img src="images/projects/queso.png" alt="" />
-        <h1>Queso</h1>
-        <p>A classroom management system with a gameful twist</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="#">
-        <img src="images/projects/scan360.png" alt="" />
-        <h1>Scan 360</h1>
-        <p>Visualizing cancer data across the state of Florida</p>
-      </a>
-    </div>
-  </li>
-  <li class="hex">
-    <div class="hexIn">
-      <a class="hexLink" href="http://games.nerdlab.miami/unsavory/">
-        <img src="images/projects/unsavory.png" alt="" />
-        <h1>Unsavory</h1>
-        <p>Experience the world of restaurant work, without paid sick days</p>
-      </a>
-    </div>
-  </li>
+	    		<ul id="hexGrid">
 
-</ul>
-  </div>
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/unsavory/">
+	    						<img src="images/projects/unsavory_w.png" alt="" />
+	    						<h1>Unsavory</h1>
+	    						<p>Experience the world of restaurant work without paid sick days</p>
+	    					</a>
+	    				</div>
+	    			</li>
 
-  <div class="two">
-  </div>
-  <div class="sectionThree" id="activitySection">
-    <h2 class="titleSection" >Activities</h2>
-    <div class="offset-2 col-8 activities">
-<!-- start feedwind code -->
-<!-- <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="104200/"></script>  -->
-<!-- end feedwind code -->
-<a class="twitter-timeline" data-height="600" href="https://twitter.com/NERDLabMiami?ref_src=twsrc%5Etfw">Tweets by NERDLabMiami</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-</div>
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/dwell/">
+	    						<img src="images/projects/dwell_w.png" alt="" />
+	    						<h1>Dwell</h1>
+	    						<p>A tabletop simulation game that teaches about the impact of poverty</p>
+	    					</a>
+	    				</div>
+	    			</li>
 
-<div class="three"></div>
-<!-- this section wraps the team members as a container-->
-<div class="sectionFour" id="teamSection">
-    <h2 class="titleSection" >Team</h2>
-  <div class="row marginFix">
-    <div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6"><img class="team-photo" src="images/clay.png">
-    <h4>Clay Ewing</h4>
-    <h5>Co-Director</h5>
-  </div>
-    <div class="teamMember col-xs-6 col-sm-4  col-md-3 col-6">  <img class="team-photo" src="images/lien.png">
-        <h4>Lien Tran</h4>
-        <h5>Co-Director</h5>
-  </div>
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://copsandrubbers.com/">
+	    						<img src="images/projects/copsrubbers_w.png" alt="" />
+	    						<h1>Cops & Rubbers</h1>
+	    						<p>A tabletop game about the negative consequences of policing tactics for sex workers</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://geomuse.as.miami.edu">
+	    						<img src="images/projects/geomuse_w.png" alt="" />
+	    						<h1>GeoMuse</h1>
+	    						<p>A geolocative guide to the Public Sculpture Collection at the University of Miami</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/eradicate/">
+	    						<img src="images/projects/eradicate_w.png" alt="" />
+	    						<h1>Eradicate</h1>
+	    						<p>A card game in which you manage a village in an effort to eradicate mosquitoes</p>
+	    					</a>
+	    				</div>
+	    			</li>
 
 
-<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/zihan.png">
-      <h4>Zihan Xu</h4>
-      <h5>Designer</h5>
-</div>
-<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/lauram.png">
-      <h4>Laura Miller</h4>
-      <h5>Designer</h5>
-</div>
+	    		</ul>
 
-<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/xueyan.jpg">
-      <h4>Xueyan Zhang</h4>
-      <h5>Designer</h5>
-</div>
+	    		<h2 class="titleSection">Work in Progress</h2>
+
+	    		<ul id="hexGrid">
 
 
-  </div>
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/squawker/">
+	    						<img src="images/projects/squawker_w.png" alt="" />
+	    						<h1>Squawker</h1>
+	    						<p>A texting simulation game for mental health awareness</p>
+	    					</a>
+	    				</div>
+	    			</li>
 
-  <h2 class="titleSection" >Alumni</h2>
-  <div class="row marginFix">
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/privilege/">
+	    						<img src="images/projects/privilege.png" alt="" />
+	    						<h1>Privilege Checked</h1>
+	    						<p>A series of interactive stories about race</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/faf/">
+	    						<img src="images/projects/png_w.png" alt="" />
+	    						<h1>Poor Not Guilty</h1>
+	    						<p>A global movement and series of interactive tools advocating for decriminalization of petty offenses</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="https://knowyournet.transistor.fm">
+	    						<img src="images/projects/kyn-logo.png" alt="" />
+	    						<h1>Know Your Net</h1>
+	    						<p>A podcast on the history of the internet</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="https://insightstoincite.transistor.fm">
+	    						<img src="images/projects/i2i-logo.png" alt="" />
+	    						<h1>Insights to Incite</h1>
+	    						<p>A podcast on the design of today's technology landscape</p>
+	    					</a>
+	    				</div>
+	    			</li>
+	    			<!-- placeholder for Roadmap to Opportunity -->
+	    			<!-- placeholder for Stop the Fire -->
+	    		</ul>
+	    	</div>
+
+	    	<div class="two">
+	    	</div>
+	    	<div class="col-12 sectionThree" id="projectsSection">
+	    		<h1 class="titleSection">The Vault</h1>
+	    		<h3 class="subtitleSection">Digital Games</h3>
+
+	    		<ul id="hexGrid">
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/zoorush">
+	    						<img src="images/projects/zoorush_w.png" alt="" />
+	    						<h1>Zoo Rush</h1>
+	    						<p>An endless runner to raise awareness and increase empathy for people with sickle cell disease</p>
+	    					</a>
+	    				</div>
+	    			</li>
 
 
-    <div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/jose.png">
-          <h4>Jose Guzman</h4>
-          <h5>Interactive Designer</h5>
-</div>
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/zoorush">
+	    						<img src="images/projects/mlf_w.png" alt="" />
+	    						<h1>Moonlight Flight</h1>
+	    						<p>An endless journey across the universe on your mobile phone</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/atlantis">
+	    						<img src="images/projects/atlantis_w.png" alt="" />
+	    						<h1>Atlantis</h1>
+	    						<p>A massively local multiplayer experience</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/dreamy">
+	    						<img src="images/projects/dreamy_w.png" alt="" />
+	    						<h1>Dreamy</h1>
+	    						<p>A dating simulator with health messaging about the dangers of tanning</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/dongreycafe">
+	    						<img src="images/projects/dongreycafe_w.png" alt="" />
+	    						<h1>Echo Earth Experience</h1>
+	    						<p>A virtual reality experience of echo location</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    		</ul>
+
+	    		<h3 class="subtitleSection">Non-Digital Games</h3>
+	    		<ul id="hexGrid">
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://immigrationgames.com">
+	    						<img src="images/projects/amiguia_w.png" alt="" />
+	    						<h1>Amiguia Americana</h1>
+	    						<p>A suite of educational games on immigration</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://humansvsmosquitoes.com">
+	    						<img src="images/projects/hvm_w.png" alt="" />
+	    						<h1>Humans vs. Mosquitoes</h1>
+	    						<p>A physical game about vector borne diseases</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/hustlinghealthcare">
+	    						<img src="images/projects/hhc_w.png" alt="" />
+	    						<h1>Hustlin' Health Care</h1>
+	    						<p>A tabletop game about health care and private insurance</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/pnc">
+	    						<img src="images/projects/pnc_w.png" alt="" />
+	    						<h1>Por Nuestras Calles</h1>
+	    						<p>A tabletop game about the commercial exploitation of children</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/vanity">
+	    						<img src="images/projects/vanity_w.png" alt="" />
+	    						<h1>Vanity</h1>
+	    						<p>A tabletop game that promotes tanning bed avoidance</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    		</ul>
+
+	    		<h3 class="subtitleSection">Apps</h3>
+	    		<ul id="hexGrid">
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/per">
+	    						<img src="images/projects/per_w.png" alt="" />
+	    						<h1>Personal Exposure Reporter</h1>
+	    						<p>A reporting tool for firefighters exposed to hazardous environments</p>
+	    					</a>
+	    				</div>
+	    			</li>
+
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/scan360">
+	    						<img src="images/projects/scan360_w.png" alt="" />
+	    						<h1>SCAN360</h1>
+	    						<p>An interactive website with geovisualizations of cancer incidence and socioeconomic factors in Florida</p>
+	    					</a>
+	    				</div>
+	    			</li>
 
 
-<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/casey.jpg">
-      <h4>Casey Lue</h4>
-      <h5>Designer</h5>
-</div>
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/queso">
+	    						<img src="images/projects/queso_w.png" alt="" />
+	    						<h1>Queso</h1>
+	    						<p>A gameful classroom management system</p>
+	    					</a>
+	    				</div>
+	    			</li>
 
 
-<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/manouj.png">
-      <h4>Manouj Kumar</h4>
-      <h5>Graduate Assistant</h5>
-</div>
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/wook">
+	    						<img src="images/projects/wook_w.png" alt="" />
+	    						<h1>Wook</h1>
+	    						<p>A branching video based narrative platform that uses QR codes</p>
+	    					</a>
+	    				</div>
+	    			</li>
+	    		</ul>
 
-<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/mike.png">
-      <h4>Michael Leyva</h4>
-      <h5>Designer</h5>
-</div>
+	    		<!-- placeholder for breathing game -->
+	    		<!-- placeholder for advertising chatbot -->
+	    		<!-- placeholder for living jim crow -->
 
+	    		<h3 class="subtitleSection">Experiments</h3>
+	    		<ul id="hexGrid">
 
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/asmrvr">
+	    						<img src="images/projects/asmrvr_w.png" alt="" />
+	    						<h1>ASMR/VR</h1>
+	    						<p>Build ASMR soundscapes in virtual reality</p>
+	    					</a>
+	    				</div>
+	    			</li>
 
-  <div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6"><img class="team-photo" src="images/chelsea.jpeg">
-  <h4>Chelsea Haina</h4>
-  <h5>Writer</h5>
-  </div>
-<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/gaby.jpg">
-      <h4>Gaby Costales</h4>
-      <h5>Developer</h5>
-</div>
+	    			<li class="hex">
+	    				<div class="hexIn">
+	    					<a class="hexLink smooth" href="http://games.nerdlab.miami/sensorbasednarrative">
+	    						<img src="images/projects/sbn_w.png" alt="" />
+	    						<h1>Sensor Based Narrative</h1>
+	    						<p>>A branching video based narrative platform that uses brainwave sensors</p>
+	    					</a>
+	    				</div>
+	    			</li>
+	    		</ul>
 
-  <div class="teamMember col-xs-4 col-sm-3  col-md-2 col-6">  <img class="team-photo" src="images/lina.jpg">
-      <h4>Lina Angel</h4>
-      <h5>Designer</h5>
-  </div>
-  <div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/franklin.jpg">
-        <h4>Franklin Zhang</h4>
-        <h5>Interactive Designer</h5>
-  </div>
+	    	</div>
+	    <div class="three"></div>
 
+	    <!-- this section wraps the team members as a container-->
+	    <div class="sectionFour" id="teamSection">
+	    	<h1 class="titleSection" >The Team</h1>
+	    	<div class="row marginFix">
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6"><img class="team-photo" src="images/clay.png">
+	    			<h4>Clay Ewing</h4>
+	    			<h5>Co-Director</h5>
+	    		</div>
 
-  <div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/pablo.jpg">
-    <h4>Pablo Obando</h4>
-    <h5>Artist</h5>
-  </div>
+	    		<div class="teamMember col-xs-6 col-sm-4  col-md-3 col-6">  <img class="team-photo" src="images/lien.png">
+	    			<h4>Lien Tran</h4>
+	    			<h5>Co-Director</h5>
+	    		</div>
 
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/xueyan.jpg">
+	    			<h4>Xueyan Zhang</h4>
+	    			<h5>3D Artist</h5>
+	    		</div>
 
-  <div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/brandon.png">
-    <h4>Brandon Wilson</h4>
-    <h5>Artist</h5>
-  </div>
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/inndiaa.png">
+	    			<h4>Inndiaa Anderson</h4>
+	    			<h5>Writer</h5>
+	    		</div>
 
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/izzy.jpg">
+	    			<h4>Isabelle Geller</h4>
+	    			<h5>Web Developer</h5>
+	    		</div>
 
-  <div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/rebekah.jpg">
-    <h4>Rebekah Monson</h4>
-    <h5>Designer</h5>
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/megan.jpg">
+	    			<h4>Megan Page</h4>
+	    			<h5>Designer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/kalpit.png">
+	    			<h4>Kalpit Mody</h4>
+	    			<h5>Game Developer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/sana.jpg">
+	    			<h4>Sana Paul</h4>
+	    			<h5>Writer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/fabrizio.jpg">
+	    			<h4>Fabrizio Darby</h4>
+	    			<h5>Writer</h5>
+	    		</div>
+
 <!--
-    <div class="socialIcons">
-    <a href="#"><i class="fab fa-facebook socialIcon"></i></a>
-  <a href="#"><i class="fab fa-twitter-square socialIcon"></i></a>
-  <a href="#"><i class="fab fa-instagram socialIcon"></i></a>
-  </div>
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/student.jpg">
+	    			<h4>Myrtle Valpoort</h4>
+	    			<h5>2D Artist</h5>
+	    		</div>
 -->
-  </div>
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/emilie.jpg">
+	    			<h4>Emilie Duran</h4>
+	    			<h5>Designer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/day.jpg">
+	    			<h4>Day Watson</h4>
+	    			<h5>Illustrator</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/harrison.jpg">
+	    			<h4>Haoran Zhang</h4>
+	    			<h5>Designer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/yunting.jpg">
+	    			<h4>Yunting Zhao</h4>
+	    			<h5>Artist</h5>
+	    		</div>
 
 
-  </div>
+	    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/max.jpg">
+	    			<h4>Max Zussman</h4>
+	    			<h5>Designer</h5>
+	    		</div>
 
 
+	    	</div>
+
+	    	<h2 class="titleSection">Our Alumni</h2>
+	    	<div class="row marginFix">
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/paulina.jpg">
+	    			<h4>Paulina Fiore</h4>
+	    			<h5>Writer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/mo.jpg">
+	    			<h4>Mojania Denis</h4>
+	    			<h5>Software Developer</h5>
+	    		</div>
 
 
-</div>
-  </div>
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">     <img class="team-photo" src="images/zihan.png">
+	    			<h4>Zihan Xu</h4>
+	    			<h5>Designer</h5>
+	    		</div>
 
-  <footer>
-  <div class="col-12 footerContent">
-    <p>© 2019 NERDLab All rights reserved</p>
-  </div>
-  </footer>
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">     <img class="team-photo" src="images/lauram.png">
+	    			<h4>Laura Miller</h4>
+	    			<h5>Designer</h5>
+	    		</div>
 
-  </body>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/jose.png">
+	    			<h4>Jose Guzman</h4>
+	    			<h5>Interactive Designer</h5>
+	    		</div>
+
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/casey.jpg">
+	    			<h4>Casey Lue</h4>
+	    			<h5>Designer</h5>
+	    		</div>
+
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/manouj.png">
+	    			<h4>Manouj Kumar</h4>
+	    			<h5>Developer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/mike.png">
+	    			<h4>Michael Leyva</h4>
+	    			<h5>Designer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6"><img class="team-photo" src="images/chelsea.jpeg">
+	    			<h4>Chelsea Haina</h4>
+	    			<h5>Writer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/gaby.jpg">
+	    			<h4>Gaby Costales</h4>
+	    			<h5>Web Developer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3  col-md-2 col-6">  <img class="team-photo" src="images/lina.jpg">
+	    			<h4>Lina Angel</h4>
+	    			<h5>Designer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/franklin.jpg">
+	    			<h4>Franklin Zhang</h4>
+	    			<h5>Interactive Designer</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/pablo.jpg">
+	    			<h4>Pablo Obando</h4>
+	    			<h5>Artist</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/brandon.png">
+	    			<h4>Brandon Wilson</h4>
+	    			<h5>Artist</h5>
+	    		</div>
+
+	    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/rebekah.jpg">
+	    			<h4>Rebecca Monson</h4>
+	    			<h5>Designer</h5>
+	    		</div>
+
+
+	    	</div>
+
+	    </div>
+	</div>
+
+	<footer>
+		<div class="col-12 footerContent">
+			<p>© 2020 NERDLab All rights reserved</p>
+		</div>
+	</footer>
+
+</body>
 </html>
