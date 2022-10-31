@@ -75,7 +75,7 @@ body {
           transform: scale(1.055);
 }
 .honeycomb-cell::after {
-  background: #474c49;
+  /*background: #474c49;*/
   opacity: 0.9;
   transition: opacity 350ms;
 }

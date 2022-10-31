@@ -84,13 +84,13 @@ h1,h3,h2,h4,h5,h6{
 .two{
   background-color: #434244 !important;
   background-image: -webkit-linear-gradient(80deg,#00A550    50%,#0998C6  50%);
-  min-height: 400px;
+  min-height: 465px;
   color:#fff;
 }
 .three{
   background-color: #434244 !important;
   background-image: -webkit-linear-gradient(100deg,#E04B9A    50%,#00A550 50%);
-  min-height: 400px;
+  min-height: 465px;
   color:#fff;
 }
 
