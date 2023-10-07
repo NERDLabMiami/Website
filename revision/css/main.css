@@ -75,13 +75,13 @@ body {
 }
 
 body {
-  background: #121212;
+  background: #434244;
   font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.941;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
   padding: 0;
 }
@@ -90,7 +90,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #793ea5;
+  color: #0998C6;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -114,7 +114,8 @@ a:active {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
-  color: #FFFFFF;
+  letter-spacing: 2px;
+  color: #E04B9A;
   text-rendering: optimizeLegibility;
 }
 
@@ -150,7 +151,6 @@ h1, .h1 {
 @media only screen and (max-width:600px) {
   h1, .h1 {
     font-size: 3.3rem;
-    letter-spacing: -.07rem;
   }
 }
 
@@ -398,7 +398,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #793ea5;
+  background: #00A550;
   position: absolute;
   left: -17px;
   top: 11px;
@@ -966,8 +966,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #793ea5;
-  border-color: #793ea5;
+  background: #00A550;
+  border-color: #00A550;
   color: #FFFFFF;
 }
 
@@ -981,8 +981,9 @@ button.btn--primary:focus,
 input[type="submit"].btn--primary:focus,
 input[type="reset"].btn--primary:focus,
 input[type="button"].btn--primary:focus {
-  background: #6b3792;
-  border-color: #6b3792;
+  background: #FFFFFF;
+  border-color: #00A550;
+  color: #00A550;
 }
 
 /* button modifiers
@@ -1418,11 +1419,11 @@ body.menu-is-open {
  * ## display headings
  * ------------------------------------------------------------------- */
 .display-1 {
+  color: #E04B9A;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
   font-size: 4.6rem;
   line-height: 1.5;
-  letter-spacing: -0.03rem;
   margin-top: 0;
   margin-bottom: 4.8rem;
 }
@@ -1434,7 +1435,6 @@ body.menu-is-open {
   line-height: 1.333;
   text-transform: uppercase;
   letter-spacing: .25rem;
-  color: #793ea5;
   margin-top: 0;
   margin-bottom: 3rem;
   position: relative;
@@ -2115,7 +2115,6 @@ body.menu-is-open {
   font-weight: 700;
   font-size: 18rem;
   line-height: 1;
-  letter-spacing: -.02em;
   color: #FFFFFF;
   margin-top: 0;
   margin-bottom: 0;
@@ -2778,6 +2777,16 @@ html.no-csstransitions .home-content__main {
 .item-process:nth-child(2n+2) {
   padding-left: 30px;
 }
+
+.item-process__text {
+  background: #ffffff;
+  padding: 10px 20px;
+  color: #434244;
+  min-height: 12em;
+  line-height: 1.2em;
+}
+
+
 
 /* ------------------------------------------------------------------- 
  * responsive:
@@ -3623,7 +3632,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-contact .subhead {
-  color: #2a1538;
+  color: #E04B9A;
 }
 
 .s-contact .section-header,
