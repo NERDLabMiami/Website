@@ -115,7 +115,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #E04B9A;
+/*  color: #E04B9A; */
+  color: #434244;
   text-rendering: optimizeLegibility;
 }
 
@@ -2778,7 +2779,7 @@ html.no-csstransitions .home-content__main {
   padding-left: 30px;
 }
 
-.item-process__text {
+.item-process__text, .item-service__text {
   background: #ffffff;
   padding: 10px 20px;
   color: #434244;
@@ -2866,7 +2867,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-services {
-  padding-top: 18rem;
+  padding-top: 10rem;
   padding-bottom: 18rem;
   position: relative;
 }
@@ -2878,8 +2879,18 @@ html.no-csstransitions .home-content__main {
   margin-top: 9rem;
 }
 
+#services {
+    background: #00A550;
+}
+
+#services h3.subhead {
+  color: #ffffff;
+  font-size:4.6rem;
+
+}
+
 .item-service {
-  margin-bottom: .9rem;
+  margin-bottom: 3rem;
 }
 
 .item-service h3 {
@@ -2895,7 +2906,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .item-service__text {
-  margin-left: 7.2rem;
+/*  margin-left: 7.2rem; */
 }
 
 .item-service__icon {
@@ -3013,14 +3024,17 @@ html.no-csstransitions .home-content__main {
   width: 50%;
   height: 100%;
   opacity: .3;
-  background-color: rgba(0, 0, 0, 0.9);
-  background-image: url(../images/pattern.jpg);
-  background-size: 760px 380px;
 }
 
 /* ------------------------------------------------------------------- 
  * ## bricks/masonry
  * ------------------------------------------------------------------- */
+
+#works .masonry-wrap {
+box-shadow: rgba(0, 0, 0, 1) 1em 1em 1em, rgba(0, 0, 0, 1) 1em 1em 1em;
+    background: #000000;
+    }
+
 .masonry-wrap {
   margin-top: 7.2rem;
   max-width: 1100px;
