@@ -43,7 +43,7 @@
  *    ## services list
  *  # works
  *    ## bricks/masonry
- *  # clients
+ *  # team
  *  # testimonials
  *  # contact
  *    ## contact social
@@ -2737,7 +2737,6 @@ html.no-csstransitions .home-content__main {
  * ## about process
  * ------------------------------------------------------------------- */
 .process {
-  margin-top: 6.6rem;
   counter-reset: ctr;
 }
 
@@ -2783,7 +2782,7 @@ html.no-csstransitions .home-content__main {
   background: #ffffff;
   padding: 10px 20px;
   color: #434244;
-  min-height: 12em;
+  min-height: 14em;
   line-height: 1.2em;
 }
 
@@ -3280,37 +3279,37 @@ box-shadow: rgba(0, 0, 0, 1) 1em 1em 1em, rgba(0, 0, 0, 1) 1em 1em 1em;
 
 
 /* ===================================================================
- * # clients
+ * # team
  *
  * ------------------------------------------------------------------- */
-.s-clients {
+.s-team {
   padding-top: 16.2rem;
   padding-bottom: 15rem;
   position: relative;
 }
 
-.s-clients .grid-overlay {
+.s-team .grid-overlay {
   border-right: 1px solid rgba(255, 255, 255, 0.05);
   border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.s-clients .grid-overlay > div,
-.s-clients .grid-overlay::before,
-.s-clients .grid-overlay::after {
+.s-team .grid-overlay > div,
+.s-team .grid-overlay::before,
+.s-team .grid-overlay::after {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
 .section-header,
-.clients-wrap,
-.clients {
+.team-wrap,
+.team {
   z-index: 3;
 }
 
-.clients-wrap {
+.team-wrap {
   margin-top: 6rem;
 }
 
-.clients {
+.team {
   list-style: none;
   text-align: center;
   margin-left: 0;
@@ -3319,86 +3318,86 @@ box-shadow: rgba(0, 0, 0, 1) 1em 1em 1em, rgba(0, 0, 0, 1) 1em 1em 1em;
   position: relative;
 }
 
-.clients a {
+.team a {
   color: rgba(255, 255, 255, 0.15);
 }
 
-.clients a:hover,
-.clients a:focus {
+.team a:hover,
+.team a:focus {
   color: #793ea5;
 }
 
-.clients li {
+.team li {
   display: inline-block;
   padding: 0 1.5rem;
 }
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * clients
+ * team
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:1000px) {
-  .s-clients {
+  .s-team {
     padding-top: 15rem;
   }
 
-  .clients {
+  .team {
     font-size: 4.2rem;
   }
 
 }
 
 @media only screen and (max-width:900px) {
-  .clients {
+  .team {
     font-size: 4rem;
   }
 
 }
 
 @media only screen and (max-width:800px) {
-  .clients-wrap {
+  .team-wrap {
     margin-top: 3.6rem;
   }
 
-  .clients {
+  .team {
     font-size: 3.4rem;
   }
 
 }
 
 @media only screen and (max-width:600px) {
-  .s-clients {
+  .s-team {
     padding-top: 12rem;
     padding-bottom: 10.2rem;
   }
 
-  .clients {
+  .team {
     font-size: 3rem;
   }
 
 }
 
 @media only screen and (max-width:500px) {
-  .clients-wrap {
+  .team-wrap {
     margin-top: 1.5rem;
   }
 
-  .clients {
+  .team {
     font-size: 2.4rem;
   }
 
-  .clients li {
+  .team li {
     padding: 0 1rem;
   }
 
 }
 
 @media only screen and (max-width:400px) {
-  .clients {
+  .team {
     font-size: 2.1rem;
   }
 
-  .clients li {
+  .team li {
     padding: 0 .6rem;
   }
 
@@ -3616,12 +3615,19 @@ box-shadow: rgba(0, 0, 0, 1) 1em 1em 1em, rgba(0, 0, 0, 1) 1em 1em 1em;
 }
 
 
+#leadership {
+
+}
+
+#leadership h3 {
+  font-size: 4.2rem;
+  color: #ffffff;
+}
 /* ===================================================================
  * # contact
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-  padding-top: 16.2rem;
   padding-bottom: 21rem;
   background-color: #5e3080;
   color: rgba(255, 255, 255, 0.6);
@@ -3645,9 +3651,6 @@ box-shadow: rgba(0, 0, 0, 1) 1em 1em 1em, rgba(0, 0, 0, 1) 1em 1em 1em;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-.s-contact .subhead {
-  color: #E04B9A;
-}
 
 .s-contact .section-header,
 .s-contact .contact-main {
@@ -3729,7 +3732,6 @@ box-shadow: rgba(0, 0, 0, 1) 1em 1em 1em, rgba(0, 0, 0, 1) 1em 1em 1em;
 
 @media only screen and (max-width:1000px) {
   .s-contact {
-    padding-top: 15rem;
     padding-bottom: 19.8rem;
   }
 
@@ -3838,8 +3840,7 @@ box-shadow: rgba(0, 0, 0, 1) 1em 1em 1em, rgba(0, 0, 0, 1) 1em 1em 1em;
  *
  * ------------------------------------------------------------------- */
 footer {
-  padding-top: 9rem;
-  padding-bottom: 6rem;
+  padding-top: 15rem;
   color: rgba(255, 255, 255, 0.6);
   background-color: #5e3080;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -3884,7 +3885,7 @@ footer a {
   padding: 0 4rem 0 7rem;
   position: absolute;
   left: 50%;
-  top: -37.5px;
+  top: 40px;
   -webkit-transform: translate3d(-50%, 0, 0);
   -ms-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0);
