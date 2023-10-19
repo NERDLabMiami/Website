@@ -1,0 +1,351 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background: #111111;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 600;
+}
+
+h1 {
+    font-size: 10em;
+    text-align: center;
+    letter-spacing: .02em;
+    padding-left: 0.05em;
+    padding-right: 0.05em;
+    line-height: 0.8em;
+}
+
+h2 {
+    padding-top: 2em;
+    font-size: 3em;
+    letter-spacing: .02em;
+
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+h4 {
+    font-size: 1.5em;
+    letter-spacing: .02em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+.manatee-text-shadow {
+    text-shadow: 2px 2px #434244;
+}
+
+.background-text-shadow {
+    text-shadow: 2px 2px #111111;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    height: 1em;
+    width: 100%;
+    border-style: none;    
+}
+
+header {
+    text-align: center;
+}
+
+.background {
+    background-color: #111111;
+}
+
+/* NERDLab Color Scheme */
+
+
+.flamingo {
+    background: #E04B9A;
+    color: #ffffff;
+}
+
+.everglade {
+    background: #00a550;
+    color: #ffffff;
+}
+
+.ocean-drive {
+    background: #0998C6;
+    color: #ffffff;
+}
+
+.manatee {
+    background: #434244;
+    color: #ffffff;
+}
+
+.snowbird {
+    background: #ffffff;
+}
+
+.flamingo-text {
+    color: #E04B9A;
+}
+
+.everglade-text {
+    color: #00a550;
+}
+
+.ocean-drive-text {
+    color: #0998C6;
+
+}
+
+.manatee-text {
+    color: #434244;
+}
+
+.snowbird-text {
+    color: #ffffff;
+}
+
+.dark-text {
+    color: #111111;
+}
+.box-shadow {
+    box-shadow: 10px 5px 5px black;
+}
+
+.splash {
+    background-image: url(images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 75vh;
+}
+
+.letterhead {
+    background-image: url(images/nerdlab.png);
+    background-repeat: no-repeat;
+    background-position: top left;    
+}
+
+.extra-padding {
+    padding-bottom: 5em;
+}
+#intro {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.highlight {
+    font-size: 3em;
+    text-align: center;
+}
+
+.highlight-small {
+    font-size: 1.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.small-button {
+    height: 2rem !important;
+    line-height: 2.3rem !important;
+}
+
+.large-button {
+    height: 6rem !important;
+    line-height: 5.6rem !important;    
+}
+
+.button {
+    color: #FFFFFF;
+    padding: 1em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.action-button {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 25%;
+    text-align: center;
+}
+
+.full-page {
+    min-height: 100vh;
+}
+
+.section {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+.flex-rows {
+    flex-direction: row;
+}
+.flex-columns {
+    flex-direction: column;
+}
+.full-width {
+    width: 100%;
+}
+.block {
+    flex: .5;  
+    min-width: 40%;
+    padding: 1em;
+    margin: 1em;
+}
+
+.leader, .staff {
+    overflow: hidden;
+}
+
+.leader img, .staff img {
+    width: 100%;
+}
+
+
+.portfolio-item, .staff {
+    flex: .3;
+    min-width: 30%;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.portfolio-item h3 {
+    display:none;
+}
+
+.portfolio-thumbnail {
+/*    width: 50%;*/
+}
+
+.portfolio-category, .portfolio-description, .link-text {
+    display: none;
+}
+
+.portfolio-description {
+    display: none;
+}
+
+.portfolio-title {
+    display: none;
+}
+
+.news article {
+    width: 100%;
+    padding: 1em;
+    margin: 1em;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Styling for the modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  width: 60%;
+}
+
+/* Styling for the close button */
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    min-height: 4em;
+    padding: 2em;
+}
+
+#textloop {
+    opacity: 0;
+    transition: opacity 1s;
+}
+/* Add styles for other sections similarly */
+
+/* Styles for the mobile menu (hamburger) */
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background-color: #333;
+    width: 150px;
+}
+
+.menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Styles for menu toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    background-color: #fff;
+    height: 3px;
+    width: 30px;
+    margin: 3px 0;
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 7em;
+    }    
+
+    h2 {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        font-size: 2em;
+    }
+
+    .fix-padding {
+        padding-top: 6em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
+
+    h5 {
+        font-size: 1.1em;
+    }
+
+
+}

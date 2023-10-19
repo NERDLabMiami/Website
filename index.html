@@ -1,638 +1,492 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>NERDLab</title>
-	<link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/responsiveHex.css">
-	<link rel="stylesheet" type="text/css" href="css/hexagons.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
-	<script src="js/smoothscroll.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NERDLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="navigationBar">
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#"><img src="images/nerdlab-cubeWhite.png" width="47" height="50" class="d-inline-block align-top" alt=""></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse justify-content-end menu" id="navbarSupportedContent" >
-				<div id="menu-center">
-					<ul class="navbar-nav">
-						<li class="nav-item  about">
-							<a class="nav-link " href="#aboutSection" class="target__link" >About</a>
-						</li>
-						<li class="nav-item featured">
-							<a class="nav-link " href="#featuredSection">Featured</a>
-						</li>
-						<li class="nav-item other-projects">
-							<a class="nav-link" href="#projectsSection">Vault</a>
-						</li>
-						<li class="nav-item team">
-							<a class="nav-link " href="#teamSection">Team</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
-
-	<div id="toploop">
-		<video width="100%" autoplay muted loop class="videoContainer" src="videos/nerdlab_background.mp4" poster="images/lab_still.jpg" type="video/mp4">
-		</video>
-		<div id="textloop"></div>
-	</div>
-
-		<script>
-			var values = ['We design interactive experiences', 
-			'We design through collaboration', 
-			'We design to inspire and educate', 
-			'We design to change the world',
-			'We design for social impact',
-			'We design to make the world a better place',
-			'We design to inspire',
-			'We design to inform and educate',
-			'We design to solve the complex challenges of today'];
-
-			textSequence(0);
-
-			function textSequence(i) {
-
-				if (values.length > i) {
-					setTimeout(function() {
-						document.getElementById("textloop").innerHTML = values[i];
-						textSequence(++i);
-	                }, 5000); // 1 second (in milliseconds)
-
-	            } else if (values.length == i) { // Loop
-	            	textSequence(0);
-	            }
-
-	        }
-	    </script>
-
-	    <div class="mainSections" >
-	    	<div class="offset-md-2 col-md-8 col-sm-12 sectionOne" id="aboutSection">
-	    		<h2 class="titleSection add-padding" >New Experience Research & Design Lab</h2>
-	    		<p class="description">New Experience Research & Design Lab (NERDLab) is a student-faculty cooperative driven by research, development, and an enthusiasm for social impact.
-	    			Based out of the Interactive Media program at the University of Miami School of Communication, we function as an incubator for initiatives that collaborate locally,
-	    		nationally, and in the global space. NERDLab integrates classic and novel techniques to produce projects that inspire and educate through innovation and fun.</p>
-	    	</div>
-	    	<div class="one"></div>
-				<div class="col-12 sectionTwo" id="featuredSection">
-	    			<h1 class="titleSection">What We're Working On</h1>
-	    			<ul class="hexGrid">
-		    			<li class="hex">
-		    				<div class="hexIn">
-		    					<a class="hexLink smooth" href="https://nerdlab.itch.io/answer-campus">
-		    						<img src="images/projects/privilege.png" alt="" />
-		    						<h1>Answer Campus</h1>
-		    						<p>An interactive story about race and gender in higher education</p>
-		    					</a>
-		    				</div>
-		    			</li>
-	    				<li class="hex">
-	    					<div class="hexIn">
-	    						<a class="hexLink smooth" href="https://nerdlab.itch.io/moonlight-flight">
-	    						<img src="images/projects/mlf_w.png" alt="" />
-	    						<h1>Moonlight Flight</h1>
-	    						<p>An endless journey across the universe</p>
-	    					</a>
-	    					</div>
-	    				</li>
-
-
-		    			<li class="hex">
-		    				<div class="hexIn">
-		    					<a class="hexLink smooth" href="http://games.nerdlab.miami/squawker/">
-		    						<img src="images/projects/squawker_w.png" alt="" />
-		    						<h1>Squawker</h1>
-		    						<p>A texting simulation game for mental health awareness</p>
-		    					</a>
-		    				</div>
-		    			</li>
-
-	    			</ul>
-
-	    			<h3 class="subtitleSection">Banned by Apple</h2>
-	    			<ul class="hexGrid">
-		    			<li class="hex">
-		    				<div class="hexIn">
-		    					<a class="hexLink smooth" href="https://play.google.com/store/apps/details?id=edu.nerdlab.miami&gl=US">
-		    						<img src="images/projects/unsavory_w.png" alt="" />
-		    						<h1>Unsavory: Pandemic Edition</h1>
-		    						<p>Experience essential work during COVID-19</p>
-		    					</a>
-		    				</div>
-		    			</li>
-
-	    			</ul>
-
-	    	</div>
-			    
-			    <div class="two"></div>
-
-	    		<div class="col-12 sectionThree" id="projectsSection">
-
-		    
-			    		<h1 class="titleSection">The Vault</h1>
-
-			    		<h3 class="subtitleSection">Digital Games</h3>
-
-			    		<ul class="hexGrid">
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/unsavory/">
-			    						<img src="images/projects/unsavory_w.png" alt="" />
-			    						<h1>Unsavory</h1>
-			    						<p>Experience the world of restaurant work without paid sick days</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/zoorush">
-			    						<img src="images/projects/zoorush_w.png" alt="" />
-			    						<h1>Zoo Rush</h1>
-			    						<p>An endless runner to raise awareness and increase empathy for people with sickle cell disease</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/atlantis">
-			    						<img src="images/projects/atlantis_w.png" alt="" />
-			    						<h1>Atlantis</h1>
-			    						<p>A massively local multiplayer experience</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/dreamy">
-			    						<img src="images/projects/dreamy_w.png" alt="" />
-			    						<h1>Dreamy</h1>
-			    						<p>A dating simulator with health messaging about the dangers of tanning</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/dongreycafe">
-			    						<img src="images/projects/dongreycafe_w.png" alt="" />
-			    						<h1>Echo Earth Experience</h1>
-			    						<p>A virtual reality experience of echo location</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    		</ul>
-
-			    		<h3 class="subtitleSection">Non-Digital Games</h3>
-			    		<ul class="hexGrid">
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/dwell/">
-			    						<img src="images/projects/dwell_w.png" alt="" />
-			    						<h1>Dwell</h1>
-			    						<p>A tabletop simulation game that teaches about the impact of poverty</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/eradicate/">
-			    						<img src="images/projects/eradicate_w.png" alt="" />
-			    						<h1>Eradicate</h1>
-			    						<p>A card game in which you manage a village in an effort to eradicate mosquitoes</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://copsandrubbers.com/">
-			    						<img src="images/projects/copsrubbers_w.png" alt="" />
-			    						<h1>Cops & Rubbers</h1>
-			    						<p>A tabletop game about the negative consequences of policing tactics for sex workers</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://immigrationgames.com">
-			    						<img src="images/projects/amiguia_w.png" alt="" />
-			    						<h1>Amiguia Americana</h1>
-			    						<p>A suite of educational games on immigration</p>
-			    					</a>
-			    				</div>
-			    			</li>
-	<!--
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://humansvsmosquitoes.com">
-			    						<img src="images/projects/hvm_w.png" alt="" />
-			    						<h1>Humans vs. Mosquitoes</h1>
-			    						<p>A physical game about vector borne diseases</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/hustlinghealthcare">
-			    						<img src="images/projects/hhc_w.png" alt="" />
-			    						<h1>Hustlin' Health Care</h1>
-			    						<p>A tabletop game about health care and private insurance</p>
-			    					</a>
-			    				</div>
-			    			</li>
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/pnc">
-			    						<img src="images/projects/pnc_w.png" alt="" />
-			    						<h1>Por Nuestras Calles</h1>
-			    						<p>A tabletop game about the commercial exploitation of children</p>
-			    					</a>
-			    				</div>
-			    			</li>
-	-->
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/vanity">
-			    						<img src="images/projects/vanity_w.png" alt="" />
-			    						<h1>Vanity</h1>
-			    						<p>A tabletop game that promotes tanning bed avoidance</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    		</ul>
-
-			    		<h3 class="subtitleSection">Podcasts</h3>
-
-			    		<ul class="hexGrid">
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="https://knowyournet.transistor.fm">
-			    						<img src="images/projects/kyn-logo.png" alt="" />
-			    						<h1>Know Your Net</h1>
-			    						<p>A podcast on the history of the internet</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="https://insightstoincite.transistor.fm">
-			    						<img src="images/projects/i2i-logo.png" alt="" />
-			    						<h1>Insights to Incite</h1>
-			    						<p>A podcast on the design of today's technology landscape</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    		</ul>
-
-			    		<h3 class="subtitleSection">Apps</h3>
-			    		<ul class="hexGrid">
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://geomuse.as.miami.edu">
-			    						<img src="images/projects/geomuse_w.png" alt="" />
-			    						<h1>GeoMuse</h1>
-			    						<p>A geolocative guide to the Public Sculpture Collection at the University of Miami</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="https://per.miami.edu/">
-			    						<img src="images/projects/per_w.png" alt="" />
-			    						<h1>Personal Exposure Reporter</h1>
-			    						<p>A reporting tool for firefighters exposed to hazardous environments</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/scan360">
-			    						<img src="images/projects/scan360_w.png" alt="" />
-			    						<h1>SCAN360</h1>
-			    						<p>An interactive website with geovisualizations of cancer incidence and socioeconomic factors in Florida</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="https://github.com/claytical/Queso-Multisite">
-			    						<img src="images/projects/queso_w.png" alt="" />
-			    						<h1>Queso</h1>
-			    						<p>A gameful classroom management system</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="https://github.com/claytical/QR-Vimeo-Hunt">
-			    						<img src="images/projects/wook_w.png" alt="" />
-			    						<h1>Wook</h1>
-			    						<p>A branching video based narrative platform that uses QR codes</p>
-			    					</a>
-			    				</div>
-			    			</li>
-			    		</ul>
-
-			    		<!-- placeholder for breathing game -->
-			    		<!-- placeholder for advertising chatbot -->
-			    		<!-- placeholder for living jim crow -->
-
-			    		<h3 class="subtitleSection">Experiments</h3>
-			    		<ul class="hexGrid">
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/asmrvr">
-			    						<img src="images/projects/asmrvr_w.png" alt="" />
-			    						<h1>ASMR/VR</h1>
-			    						<p>Build ASMR soundscapes in virtual reality</p>
-			    					</a>
-			    				</div>
-			    			</li>
-
-			    			<li class="hex">
-			    				<div class="hexIn">
-			    					<a class="hexLink smooth" href="http://games.nerdlab.miami/sensorbasednarrative">
-			    						<img src="images/projects/sbn_w.png" alt="" />
-			    						<h1>Sensor Based Narrative</h1>
-			    						<p>A branching video based narrative platform that uses brainwave sensors</p>
-			    					</a>
-			    				</div>
-			    			</li>
-			    		</ul>
-			</div>
-		    <div class="three"></div>
-
-		    <!-- this section wraps the team members as a container-->
-		    <div class="sectionFour" id="teamSection">
-		    	<h1 class="titleSection" >The Team</h1>
-		    	<div class="row marginFix">
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6"><a href="mailto:c.ewing+nerdlab@miami.edu"><img class="team-photo" src="images/clay.png"></a>
-		    			<h4>Clay Ewing</h4>
-		    			<h5>Director</h5>
-		    		</div>
-					<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6"><a href="mailto:llopez@miami.edu@miami.edu"><img class="team-photo" src="images/lorena.jpg"></a>
-		    			<h4>Lorena Lopez</h4>
-	    				<h5>Director of Interactives</h5>
-	    			</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/fabrizio.jpg">
-		    			<h4>Fabrizio Darby</h4>
-		    			<h5>Lead Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/day.jpg">
-		    			<h4>Day Watson</h4>
-		    			<h5>Illustrator</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Nia James</h4>
-		    			<h5>Illustrator</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/caleb.jpg">
-		    			<h4>Caleb Solomon</h4>
-		    			<h5>Illustrator</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/cassandra.jpg">
-		    			<h4>Cassandra Swilley</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Luz Cruz</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Catherine Woods</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/gwyneth.jpg">
-		    			<h4>Gwyneth Johnson</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Lesha Jackson</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/yoland.jpg">
-		    			<h4>Yoland Victor</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Phidela Cheng</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/arianna.png">
-		    			<h4>Arianna Nicolas</h4>
-		    			<h5>Illustrator</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-3 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Asha Wills</h4>
-		    			<h5>Illustrator</h5>
-		    		</div>
-
-
-		    	</div>
-
-		    	<h2 class="titleSection">Our Alumni</h2>
-		    	<div class="row marginFix">
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6"><img class="team-photo" src="images/lien.png">
-		    			<h4>Lien Tran</h4>
-		    			<h5>Co-Director</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/emilie.jpg">
-		    			<h4>Emilie Duran</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Irene Vailikit</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/kalpit.png">
-		    			<h4>Kalpit Mody</h4>
-		    			<h5>Game Developer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/megan.jpg">
-		    			<h4>Megan Page</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/sana.jpg">
-		    			<h4>Sana Paul</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/inndiaa.png">
-		    			<h4>Inndiaa Anderson</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/yunting.jpg">
-		    			<h4>Yunting Zhao</h4>
-		    			<h5>Artist</h5>
-		    		</div>
-		    		
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Myrtle Valpoort</h4>
-		    			<h5>2D Artist</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-6 col-sm-4 col-md-2 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Max Zussman</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/xueyan.jpg">
-		    			<h4>Xueyan Zhang</h4>
-		    			<h5>3D Artist</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/harrison.jpg">
-		    			<h4>Haoran Zhang</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/blank-avatar.png">
-		    			<h4>Mojania Denis</h4>
-		    			<h5>Software Developer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/izzy.jpg">
-		    			<h4>Isabelle Geller</h4>
-		    			<h5>Web Developer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/paulina.jpg">
-		    			<h4>Paulina Fiore</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">     <img class="team-photo" src="images/zihan.png">
-		    			<h4>Zihan Xu</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">     <img class="team-photo" src="images/lauram.png">
-		    			<h4>Laura Miller</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/jose.png">
-		    			<h4>Jose Guzman</h4>
-		    			<h5>Interactive Designer</h5>
-		    		</div>
-
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/casey.jpg">
-		    			<h4>Casey Lue</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/manouj.png">
-		    			<h4>Manouj Kumar</h4>
-		    			<h5>Developer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/mike.png">
-		    			<h4>Michael Leyva</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6"><img class="team-photo" src="images/chelsea.jpeg">
-		    			<h4>Chelsea Haina</h4>
-		    			<h5>Writer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/gaby.jpg">
-		    			<h4>Gaby Costales</h4>
-		    			<h5>Web Developer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3  col-md-2 col-6">  <img class="team-photo" src="images/lina.jpg">
-		    			<h4>Lina Angel</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/franklin.jpg">
-		    			<h4>Franklin Zhang</h4>
-		    			<h5>Interactive Designer</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/pablo.jpg">
-		    			<h4>Pablo Obando</h4>
-		    			<h5>Artist</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/brandon.png">
-		    			<h4>Brandon Wilson</h4>
-		    			<h5>Artist</h5>
-		    		</div>
-
-		    		<div class="teamMember col-xs-4 col-sm-3 col-md-2 col-6">    <img class="team-photo" src="images/rebekah.jpg">
-		    			<h4>Rebecca Monson</h4>
-		    			<h5>Designer</h5>
-		    		</div>
-
-
-	    		</div>
-
-	    	</div>
-		</div>
-	<footer>
-		<div class="col-12 footerContent">
-			<p>© 2022 NERDLab All rights reserved</p>
-		</div>
-	</footer>
-
+<!--
+    <header>
+        <nav>
+            <div class="small-logo">
+                <a href="#splash">Logo</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">In The News</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#practicum">Practicum</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+-->
+    <!-- SPLASH PAGE -->
+
+    <div class="manatee splash">
+
+        <div id="intro">
+            <h1 class="manatee-text-shadow">New Experience</h1>
+            <h1 class="manatee-text-shadow">Design and Research</h1>
+            <p class="highlight" id="textloop">We design for social impact</p>                  
+            <a href="#about" class="button everglade action-button scroll-to">Learn More</a>
+        </div>
+
+    </div>
+
+    <!-- END SPLASH -->
+
+
+    <div class="background letterhead" id="about">
+        <header>
+            <h2 class="flamingo-text fix-padding">We Are Change Makers</h2>
+            <p class="snowbird-text highlight-small">Based out of the Interactive Media program at the University of Miami School of Communication, we are an award winning academic game studio that focuses on social impact. NERDLab integrates classic and novel techniques to produce projects that inspire and educate through innovation and fun.</p>       
+        </header>
+        <section class="section about">
+            <div class="block ocean-drive box-shadow">
+                <h4 class="manatee-text-shadow">Incubation</h4>
+                <p>Good ideas can come from anyone. Projects developed by NERDLab aren't just dreamed up in our studio. They come from prototypes built in the classroom and workshops with research teams.</p>
+            </div>
+            <div class="block ocean-drive box-shadow">
+                <h4 class="manatee-text-shadow">Innovation</h4>
+                <p>As games continue to grow in the ways that they are used, we seek to push the boundaries of what can be done through this interactive medium: promoting critical dialogue, reducing stigmas, advocating for social justice, dissecting complex systems, and much more.</p>
+            </div>
+            <div class="block ocean-drive box-shadow">
+                <h4 class="manatee-text-shadow">Professional Development</h4>
+                    <p>Students from across the University of Miami are invited to apply to be a part of NERDLab. We welcome anyone looking to level up their skills and increase their body of work. We think the best way to learn is by working on real world projects.</p>
+            </div>
+            <div class="block ocean-drive box-shadow">
+                <h4 class="manatee-text-shadow">Mentorship</h4>
+                <p>We are committed to providing opportunities for hands on learning with a focus on mentorship. We are a community and we strive to create life long relationships with the members of our lab.</p>
+            </div>
+        </section>
+    </div>
+    <div class="everglade">
+        <header>
+            <h2 class="manatee-text-shadow">Making Headlines</h2>
+
+        </header>
+        <section id="news" class="section news">
+            <!-- Content for News Highlights -->
+           
+
+            <article class="snowbird box-shadow">
+                <h5 class="manatee-text">Eight Serious Games Win Awards in Annual International Competition</h5>
+                <p class="dark-text">Answer Campus cited for excellence in the 2023 International Serious Play Awards Program</p>
+                <a class="button small-button everglade" href="https://www.seriousplayconf.com/oct-1-2023-eight-serious-games-designed-in-the-student-entry-category-win-awards/ ">Read More</a>
+            </article>
+
+            <article class="snowbird box-shadow">
+                <h5 class="manatee-text">Game Hopes to Tackle Tough Talks and Tout Tolerance</h5>
+                <p class="dark-text">A new video game crafted by students at faculty members at the University of Miami delves into difficult conversations about identity and discrimination to illuistrate more accepting responses</p>
+                <a class="button small-button everglade" href="https://com.miami.edu/2023/08/14/game-hopes-to-tackle-tough-talks-and-tout-tolerance/">Read More</a>
+            </article>
+
+            <article class="snowbird box-shadow">
+                <h5 class="manatee-text">Games for Change Created by Students and Faculty</h5>
+                <p class="dark-text">The last place one might expect to learn a life lesson or two from is a video game.</p>
+                <a class="button small-button everglade" href="https://com.miami.edu/2019/10/31/games-for-change-created-by-students-and-faculty/">Read More</a>
+            </article>
+        </section>
+    </div>
+
+    <div class="background">
+        <header>
+            <h2 class="flamingo-text">Join Us</h2>
+            <!-- Content for Jobs Section -->
+            <p class="snowbird-text highlight-small">Get an experience that lets you flex your creative muscles working on projects that seek positive change. Our games have been exhibited and played around the globe. You will work closely with faculty that are experts in art, design, and technology. We are a full service design and development studio. We go from concept to prototype to launch. Student members of NERDLab work closely with faculty throughout the production cycle with an opportunity to work on story development, design, art, and code.</p>    
+        </header>
+        <section id="jobs" class="section jobs flex-rows">
+
+            <div class="block ocean-drive box-shadow">
+                <h4 class="manatee-text-shadow">System Design</h4>
+                <p>Do you dream of playful systems in your sleep? Introduce yourself and send us a design document or prototype.</p>
+            </div>
+
+            <div class="block ocean-drive box-shadow">
+                <h4 class="manatee-text-shadow">Story Development</h4>
+                <p>We all have stories to tell. Introduce yourself and send us a writing sample.</p>
+            </div>
+
+            <div class="block ocean-drive box-shadow">
+                <h4 class="manatee-text-shadow">Visual Design</h4>
+                <p>We have employed students with a range of skills in both 2D and 3D art. Introduce yourself and send us some of your best work.</p>
+            </div>
+
+            <div class="block ocean-drive box-shadow">
+                <h4 class="manatee-text-shadow">Code</h4>
+                <p>Want to put your programming skills to work on a project that will be published on a variety of platforms? Introduce yourself and send us a link to your Github repos.</p>
+            </div>
+            <hr>
+            <a href="#" class="small-button button flamingo">Inquire About Positions</a>
+        </section>
+
+    </div>
+
+    <div class="manatee">
+        <header class="extra-padding">
+            <h2 class="background-text-shadow">Our Work</h2>
+                <p class="highlight-small">As part of an academic institution, we strive to make our work as accessible and transparent as possible. Everything we publish is free and when possible open source. Check out our recent work.</p>
+        </header>
+        <section id="portfolio" class="section portfolio flex-rows background">
+            <!-- Content for Portfolio Section -->
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/ac" class="link" title="Answer Campus">
+                    <img class="portfolio-thumbnail" src="images/portfolio/answercampus.png" />
+                    <h3>Answer Campus</h3>
+                    <span class="link-text">Learn More</span>
+                    <p class="portfolio-category">Game</p>
+                    <p class="portfolio-description">Recognized by the International Serious Play Awards for excellence, Answer Campus, is a game that takes you on a journey through a college campus to explore challenging scenarios around identity markers such as race, gender, sexuality, ableism, and more. As you navigate the interactive stories, you'll have the opportunity to respond to challenging scenarios and choose from a variety of actions, including being supportive, diplomatic, combative, or disengaged. You'll be able to explore different approaches and learn about the impact of your choices.</p></a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://nerdlab.itch.io/moonlight-flight" class="link" title="Moonlight Flight">
+                    <img class="portfolio-thumbnail" src="images/portfolio/moonlight.png" />
+                    <h3>Moonlight Flight</h3>
+                    <span class="link-text">Play on Itch.io</span>
+                    <p class="portfolio-category">Game</p>
+                    <p class="portfolio-description">You are an astronaut on a trip across the universe, releasing trapped energy back into being and grooving to an endless mix for lo-fi beats. A universe waits to be born. Clumsily you drift from energy source to energy source as your fingers pull your ship in their direction, accumulating enough raw material to build galaxies in the darkness, grooving to a loop based lo-fi composition.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/squawker/" class="link" title="Squawker">
+                    <img class="portfolio-thumbnail" src="images/portfolio/squawker.png" />
+                    <h3>Squawker</h3>
+                    <span class="link-text">Play Prototype</span>
+                    <p class="portfolio-category">Research Prototype</p>
+                    <p class="portfolio-description">Working with communication researchers, we developed a novel intervention to encourage first-year college students to identify signs of mental health issues.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/unsavory" class="link" title="Unsavory">
+                    <img class="portfolio-thumbnail" src="images/portfolio/unsavory.png" />
+                    <h3>Unsavory</h3>
+                    <span class="link-text">Learn More</span>
+                    <p class="portfolio-category">Game</p>
+                    <p class="portfolio-description">According to a 2012 survey of restaurant workers, 90% did not receive paid sick days. This Serious Play Gold Award-winning game allows the player to experience the perspective of a person working in a fast-casual restaurant when they get sick.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/zoorush" class="link" title="Zoo Rush">
+                    <img class="portfolio-thumbnail" src="images/portfolio/zoorush.png" />
+                    <h3>Zoo Rush</h3>
+                    <p class="portfolio-category">Game</p>
+                    <span class="link-text">Learn More</span>                    
+                    <p class="portfolio-description">Sickle Cell Disease is a painful condition that disproportionately affects African Americans. This AEJMC Best of Web mobile game seeks to increase awareness and raise empathy due to the stigmas associated with chronic pain and drug abuse.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/atlantis" class="link" title="Atlantis">
+                    <img class="portfolio-thumbnail" src="images/portfolio/atlantis.png" />
+                    <h3>Atlantis</h3>
+                    <p class="portfolio-category">Game</p>
+                    <span class="link-text">Learn More</span>
+                    <p class="portfolio-description">What kind of game could be played by everyone in a movie theater? This 2014 IndieCade selection is composed of 4 mini games that tell the final story of the lost civilization of Atlantis.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/dreamy" class="link" title="Dreamy">
+                    <img class="portfolio-thumbnail" src="images/portfolio/dreamy.png" />
+                    <h3>Dreamy</h3>
+                    <p class="portfolio-category">Research Prototype</p>
+                    <span class="link-text">Play Prototype</span>
+                    <p class="portfolio-description">Can we use a game to change a college student's intention to use a tanning bed? Dreamy is a dating simulator that incorporates tanning into the attractiveness of characters. This creates the conditions to incorporate messages based on a behavioral theory model.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/atlantis" class="link" title="Don Grey Cafe Poster">
+                    <img class="portfolio-thumbnail" src="images/portfolio/dongreycafe.png" />
+                    <h3>Don Grey Cafe</h3>
+                    <span class="link-text">Learn More</span>                    
+                    <p class="portfolio-category">Game</p>
+                    <p class="portfolio-description">First prototyped in a 24-hour game jam, this Horizon Interactive award winner was eventually released on the App Store and Google Play. We partnered with a local Miami woman-owned business to incorporate their product into the game.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/dwell" class="link" title="Dwell">
+                    <img class="portfolio-thumbnail" src="images/portfolio/dwell.jpg" />
+                    <h3>Dwell</h3>
+                    <p class="portfolio-category">Game</p>
+                    <span class="link-text">Learn More</span>                    
+                    <p class="portfolio-description">Developed in collaboration with nursing faculty, this poverty simulator is designed to allow nursing students to experience the health care system through the perspective of a patient. This game will soon be published through Central Michigan Press.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/eradicate" class="link" title="Eradicate!">
+                    <img class="portfolio-thumbnail" src="images/portfolio/eradicate.png" />
+                    <h3>Eradicate!</h3>
+                    <p class="portfolio-category">Game</p>
+                    <span class="link-text">Learn More</span>                    
+                    <p class="portfolio-description">First, there was Humans vs. Mosquitoes, a physical game commissioned by Red Cross Red Crescent to teach children how to prevent mosquitoes from breeding. This iteration of the game is designed as a card game to allow for play in small groups or as a solo activity.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://www.copsandrubbers.com" class="link" title="Cops and Rubbers">
+                    <img class="portfolio-thumbnail" src="images/portfolio/copsrubbers.png" />
+                    <h3>Cops and Rubbers</h3>
+                    <p class="portfolio-category">Game</p>
+                    <span class="link-text">Learn More</span>                    
+                    <p class="portfolio-description">Did you know that there are countries around the world where the police use the possession of a condom as evidence of prostitution? In this Meaningful Play award-winning game, you play as a sex worker with the constant threat of the police arresting you for protecting yourself.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://games.nerdlab.miami/vanity" class="link" title="Vanity">
+                    <img class="portfolio-thumbnail" src="images/portfolio/vanity.jpg" />
+                    <h3>Vanity</h3>
+                    <p class="portfolio-category">Game</p>
+                    <span class="link-text">Learn More</span>                    
+                    <p class="portfolio-description">Before Dreamy, there was Vanity: a board game that puts aspiring Hollywood actors in auditions that demand a specific shade of skin. Get the part, but don't get skin cancer!</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://per.miami.edu" class="link" title="Personal Exposure Reporter">
+                    <img class="portfolio-thumbnail" src="images/portfolio/per.png" />
+                    <h3>Personal Exposure Reporter</h3>
+                    <p class="portfolio-category">Web App</p>
+                    <span class="link-text">Check It Out</span>                    
+                    <p class="portfolio-description">One of 7 initial projects from the Firefighter Cancer Initiative, this app allows firefighters to log their exposure to toxic elements and share the data with researchers. By collecting enough data, the team hopes that evidence is found to advocate for legislation that acknowledges the increased risk of specific cancers for firefighters.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://www.scan360.com" class="link" title="SCAN360 Screenshot">
+                    <img class="portfolio-thumbnail" src="images/portfolio/scan360.png" />
+                    <h3>SCAN360</h3>
+                    <p class="portfolio-category">Prototype</p>
+                    <span class="link-text">Check Out The Production Version</span>             
+                    <p class="portfolio-description">What could we glean from hyper-local geovisualizations of cancer rates in the United States? This prototype used a variety of data visualization techniques with cancer data for the state of Florida at the ZIP code level. A production version was developed by an external studio to launch to the public.</p>
+                </a>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://github.com/claytical/Queso-Multisite" class="link" title="Queso">
+                    <img class="portfolio-thumbnail" src="images/portfolio/queso.png" />
+                    <h3>Queso</h3>
+                    <p class="portfolio-category">Web App</p>
+                    <span class="link-text">Get the Code</span>                    
+                    <p class="portfolio-description">What if your class was designed like a game? Queso is a classroom management system for the gameful classroom: assignments map to quests, grades map to levels, the language of games is at the core of the system.</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+<div id="portfolioModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+    <a href="#" class="button large-button flamingo" id="modal-link">TEXT TO CHANGE</a>
+  </div>
+</div>
+
+
+    <div class="ocean-drive extra-padding">
+        <header>
+            <h2 class="manatee-text-shadow">Get Class Credit</h2>
+        </header>
+        <section id="practicum" class="section practicum">
+            <!-- Content for Practicum Section -->
+
+            <p class="highlight-small">Are you a creative soul eager to make a real impact? Passionate about diversity, inclusion, and gaming? Here's your chance to turn your ideas into a powerful standalone episode of Answer Campus, and earn academic credit while doing it!</p>
+            
+            <p class="highlight-small">In this dynamic and engaging course, you'll learn the ins and outs of creating your very own standalone episode for Answer Campus. You'll be at the helm, shaping the narrative, scenarios, all with the existing characters and maybe a new one!</p>
+            
+            <p class="highlight-small">Dive deep into the art of storytelling, where you'll craft compelling narratives that challenge players to think critically and empathize with diverse perspectives. Discover the mechanics behind choice-based gameplay, ensuring that your episode offers players a thought-provoking and immersive experience.</p>
+
+            <a href="mailto:c.ewing@miami.edu?subject:Answer Campus Practicum" class="button flamingo button">Contact Us</a>            
+        </section>
+    </div>
+
+
+
+    <div class="background">
+        <header>
+            <h2 class="snowbird-text manatee-text-shadow">The Team</h2>        
+        </header>
+
+        <header>
+            <h3 class="snowbird-text">Leadership</h3>
+        </header>
+
+        <div id="team" class="section team">
+
+            <div class="leader block snowbird">
+                <img src="images/people/clay.png">
+                <h3>Clay Ewing</h3>
+                <h4>Director</h4>
+            </div>
+
+            <div class="leader block snowbird">
+                <img src="images/people/lorena.jpg">
+                <h3>Lorena Lopez</h3>
+                <h4>Director of Interactives</h4>
+            </div>
+
+        </div>
+
+        <header>
+            <h3 class="snowbird-text">Staff and Alumni</h3>
+        </header>
+
+        <section class="section">
+
+            <div class="staff block manatee">
+                <h4>Day Watson</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Nia James</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Caleb Solomon</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Cassandra Swilley</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Luz Cruz</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Catherine Woods</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Gwyneth Johnson</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Lesha Jackson</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Yoland Victor</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Phidela Chang</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Arianna Nicolas</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Xueer Xia</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Asha Wells</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Emilie Duran</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Irene Vailikit</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Kalpit Mody</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Megan Page</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Sana Paul</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Inndiaa Anderson</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Yunting Zhao</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Myrtle Valpoort</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Max Zussman</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Xueyan Zhang</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Haoran Zhang</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Mojania Denis</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Isabelle Geller</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Paulina Fiore</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Zihan Xu</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Laura Miller</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Jose Guzman</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Casey Lue</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Manouj Kumar</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Michael Leyva</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Chelsea Haina</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Gaby Costales</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Lina Angel</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Franklin Zhang</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Pablo Obando</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Brandon Wilson</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Rebekah Monson</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Ebby Wahman</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Shareen Dookie</h4>
+            </div>
+            <div class="staff block manatee">
+                <h4>Lien Tran</h4>
+            </div>
+                </section>
+        </div>
+
+    <footer class="everglade">
+        <p class="highlight-small">© 2023 NERDLab All rights reserved</p>
+    </footer>
+<script src="script.js"></script>
 </body>
 </html>
