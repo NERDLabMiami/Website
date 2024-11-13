@@ -44,45 +44,6 @@
 
 
 
-
-    document.addEventListener("DOMContentLoaded", function() {
-    var portfolioItems = document.querySelectorAll(".portfolio-item");
-  
-  portfolioItems.forEach(function(item) {
-    item.addEventListener("click", function(e) {
-      e.preventDefault();
-      var title = item.querySelector("h3").textContent;
-      var description = item.querySelector(".portfolio-description").textContent;
-      var link = item.querySelector(".link").getAttribute("href");
-      var linktext = item.querySelector(".link-text").textContent;
-      openModal(title, description, linktext, link);
-    });
-  });
-});
-
-function openModal(title, description, linktext, link) {
-  var modal = document.getElementById('portfolioModal');
-  var modalTitle = document.getElementById('modal-title');
-  var modalDescription = document.getElementById('modal-description');
-  var modalLink = document.getElementById('modal-link');  
-  modal.style.display = 'flex';
-  modalTitle.textContent = title;
-  modalDescription.textContent = description;
-  modalLink.textContent = linktext;
-  modalLink.href = link;
-}
-
-function closeModal() {
-  var modal = document.getElementById('portfolioModal');
-  modal.style.display = 'none';
-}
-
-document.addEventListener("click", function(event) {
-  var modal = document.getElementById('portfolioModal');
-  if (event.target == modal) {
-    closeModal();
-  }
-});
 /*
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');

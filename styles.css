@@ -217,32 +217,29 @@ header {
     width: 100%;
 }
 
-
+.portfolio-item h3 {
+    margin-top: .25em;
+}
 .portfolio-item, .staff {
-    flex: .3;
-    min-width: 30%;
+    flex: 1;
+    min-width: 100%;
     overflow: hidden;
     padding: 1em;
 }
 
-.portfolio-item h3 {
-    display:none;
-}
-
 .portfolio-thumbnail {
-/*    width: 50%;*/
-}
-
-.portfolio-category, .portfolio-description, .link-text {
-    display: none;
+    float: left;
+    padding: 1em;
+    
 }
 
 .portfolio-description {
-    display: none;
+    padding-right: 1em;
+    text-align: justify;
+    font-size: 1.25em;
 }
 
 .portfolio-title {
-    display: none;
 }
 
 .news article {
