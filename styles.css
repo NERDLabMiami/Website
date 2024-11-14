@@ -167,6 +167,7 @@ header {
 }
 
 .button {
+    display: inline-block;
     color: #FFFFFF;
     padding: 1em;
     text-transform: uppercase;
